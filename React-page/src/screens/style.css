@@ -1,0 +1,16 @@
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px;
+}
+h2{
+    text-align: center;
+}
+
+#header{
+    text-align: center;
+}
+
+.nav_button{
+    margin: 10px 20px;
+}
