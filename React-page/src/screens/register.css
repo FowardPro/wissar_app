@@ -1,0 +1,115 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 10px;
+    line-height: 1.6;
+    /* Improved line spacing for better readability */
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    /* More fluid responsive width */
+    max-width: 500px;
+    margin: 40px auto;
+    /* Increased vertical space for better layout */
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: scale(1.01);
+    /* Subtle grow effect on hover */
+}
+
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px 10px;
+    /* Increased padding for better touch interaction */
+    margin: 10px 0 16px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.2s;
+    font-size: 16px;
+    /* Larger font size for better readability */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="file"]:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25);
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 12px;
+    /* Balanced padding for better aesthetics */
+    margin: 16px 0 12px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.tab-group {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: #555;
+    border: none;
+    background: transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.tab.active,
+.tab:hover {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    /* Increased font size for more emphasis */
+    margin-bottom: 20px;
+    /* More space under headers to separate sections */
+}

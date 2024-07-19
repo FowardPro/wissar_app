@@ -1,16 +1,84 @@
-.form-group{
+/* Header styles */
+#header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#header nav {
     display: flex;
-    flex-direction: column;
-    margin: 20px 50px;
-}
-h2{
-    text-align: center;
+    justify-content: flex-end;
+    gap: 15px;
 }
 
-#header{
-    text-align: center;
+.nav_button {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.nav_button{
-    margin: 10px 20px;
+.nav_button:hover {
+    background-color: #e2e6ea;
+}
+
+/* Login styles */
+.login-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../../public/LoginBackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.login-form {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.control-form {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+.forgot-password,
+.signup-link {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+
+.signup-link a {
+    color: blue;
 }
