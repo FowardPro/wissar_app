@@ -32,6 +32,9 @@ function Register() {
 
     const renderForm = (userType) => (
         <form onSubmit={validateForm} className="p-3">
+            <div className="form-header">
+                <img src={`${process.env.PUBLIC_URL}/user.png`} alt="User Icon" style={{ width: '50px', display: 'block', margin: '0 auto 20px' }} />
+            </div>
             <div className="mb-3">
                 <input type="text" className="form-control" placeholder="First Name" name="fname" required />
             </div>
@@ -63,15 +66,17 @@ function Register() {
     );
 
     return (
-        <div className="container mt-5">
+        <div>
             <Header />
-            <div className="btn-group mb-3" role="group" aria-label="User type tabs">
-                <button type="button" className={`btn ${activeTab === 'event-organizer' ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => setActiveTab('event-organizer')}>Event Organizer</button>
-                <button type="button" className={`btn ${activeTab === 'artist' ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => setActiveTab('artist')}>Artist</button>
-                <button type="button" className={`btn ${activeTab === 'attendee' ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => setActiveTab('attendee')}>Attendee</button>
-            </div>
-            <div className="active form-section">
-                {renderForm(activeTab)}
+            <div className="container mt-5">
+                <div className="btn-group mb-3" role="group" aria-label="User type tabs">
+                    <button type="button" className={`btn ${activeTab === 'event-organizer' ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => setActiveTab('event-organizer')}>Event Organizer</button>
+                    <button type="button" className={`btn ${activeTab === 'artist' ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => setActiveTab('artist')}>Artist</button>
+                    <button type="button" className={`btn ${activeTab === 'attendee' ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => setActiveTab('attendee')}>Attendee</button>
+                </div>
+                <div className="active form-section">
+                    {renderForm(activeTab)}
+                </div>
             </div>
         </div>
     );
