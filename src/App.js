@@ -26,7 +26,7 @@ function App() {
         </div> 
         <UpcomingEvents />
         <div className='change_background1'>
-          <h2>SA's Best Artists</h2>
+          <h2>South African Best Artists</h2>
           <p>Booking artists has never been this easy.</p>
         </div>
         <MiddelVideo />
