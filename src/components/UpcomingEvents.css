@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+.upcoming-events-container {
+    position: relative;
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #000000;
+  }
+  
+  .events-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-height: 700px; /* Default height before scrolling */
+    overflow: hidden;
+    transition: max-height 0.5s ease; /* Smooth animation for max-height */
+  }
+  
+  .events-wrapper.show-more {
+    max-height: 1000px; /* Height when expanded */
+    overflow-y: auto; /* Enable vertical scroll */
+  }
+  
+  .header-svg {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .header-svg-image {
+    height:100px; /* Adjust size as needed */
+    margin-left: 20px; /* Add margin if needed */
+  }
+  
+  .event-content,
+  .event-content.reverse {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Vertically center the items */
+  }
+  
+  .event-photo {
+    width: 400px;
+    height: 550px;
+    margin-right: 1rem;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .event-photo1 {
+    width: 400px;
+    height: 550px;
+    margin-right: 2rem;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .event-content.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .event-content.reverse .event-photo {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+  
+  .event-description,
+  .event-description1 {
+    flex: 1;
+  }
+  
+  .event-description p {
+    text-align: left;
+    margin: 0;
+    color: #fff;
+  }
+
+  .event-description h2
+  {
+    text-align: left;
+    font-family: 'Dancing Script', cursive; /* Signature font */
+    font-size: 60px; /* Font size */
+    color: wheat;
+  }
+
+  .event-description1 h2
+  {
+    text-align: right;
+    font-family: 'Dancing Script', cursive; /* Signature font */
+    font-size: 60px; /* Font size */
+    color: wheat;
+  }
+  
+  .event-description1 p {
+    text-align: right;
+    margin: 0;
+    color: #fff;
+  }
+  
+  .view-more-button {
+    display: block;
+    width: 100%; /* Full width */
+    padding: 1rem; /* Larger padding for modern look */
+    font-size: 1.2rem; /* Larger font size */
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background color */
+    border: 2px solid white;   
+    border-radius: 0; /* No border radius for full width */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center; /* Center text */
+    transition: 0.5s;
+  }
+  
+  .view-more-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.02);
+  }
+  
+  .view-more-button.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+
+  .vertical-pipe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+  }
+  
+  .vertical-pipe {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pipe {
+    font-size: 7rem; /* Adjust size as needed */
+    margin-right: 10px; /* Space between the pipe and text */
+    /* color: white; */
+  }
+
+  .pipe1 {
+    
+    font-size: 7rem; /* Adjust size as needed */
+     /* Space between the pipe and text */
+  }
+
+  .vertical-pipe1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+  }
+  
+  .vertical-pipe1 {
+    display: flex;
+    align-items: center;
+  }

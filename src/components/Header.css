@@ -1,0 +1,105 @@
+.header {
+  background-color: black;
+  color: white;
+  padding: 1rem 0;
+  width: 100%;
+  transition: top 1s, background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+.header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #ffffff; /* Ensure the header is visible */
+  color: black; /* Change text color to black when sticky */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo {
+  margin-left: 20px; /* SVG margin-left */
+}
+
+.logo-svg {
+  height: 200px;  
+  transition: height 0.3s ease; /* Smooth transition for logo size */
+}
+
+.header.sticky .logo-svg {
+  content: url('../assets/photos/svg/header_logo1.svg'); /* Path to sticky logo */
+  height: 150px; /* Adjust size for sticky state */
+}
+
+.navigation {
+  margin-right: 20px; /* Navigation margin-right */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 9rem;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Media queries for responsive design */
+
+/* For tablets and smaller screens (min-width: 768px) */
+@media (max-width: 768px) {
+  .logo-svg {
+    height: 150px; /* Adjust logo size for smaller screens */
+  }
+
+  .navigation {
+    margin-right: 10px; /* Reduced margin for smaller screens */
+  }
+
+  nav ul {
+    gap: 1rem; /* Adjust gap between navigation items */
+  }
+}
+
+/* For mobile screens (min-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .logo {
+    margin-left: 0; /* Remove margin for mobile */
+    margin-bottom: 1rem; /* Add space below the logo */
+  }
+
+  .navigation {
+    margin-right: 0; /* Remove margin for mobile */
+    width: 100%; /* Full width for navigation */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack navigation items vertically */
+    width: 100%; /* Full width for navigation items */
+    text-align: center; /* Center text in navigation items */
+  }
+
+  nav li {
+    margin: 0.5rem 0; /* Add vertical spacing between items */
+  }
+
+  nav a {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+}
