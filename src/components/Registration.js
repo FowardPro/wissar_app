@@ -57,7 +57,8 @@ const Registration = () => {
                                 </div>
                             </form>
                             <div className="signin">
-                                <span>Already have an account? <a href="#">Log in here</a></span>
+                                <span>Already have an account? <a href="#">Log in here
+                                    </a></span>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,137 @@
+/* src/components/OrganizerAccountDesktop.css */
+.organizer-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    padding: 2px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.organizer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    z-index: 1100;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.burger-icon {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-left: 30px;
+}
+
+.menu-dropdown {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    background-color: black;
+    width: 280px;
+    height: calc(100% - 100px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 1100;
+    margin-top: 3px;
+    
+    
+}
+
+.menu-dropdown.open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 30px 0;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    width: 80%;
+}
+
+.menu-item:hover {
+    background-color: #b3b3b3;
+    transition: .5s ease-in-out;
+}
+
+.logo {
+    margin-left: 100px;
+}
+
+.logo-svg {
+    height: 90px;
+    transition: height 0.3s ease;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.user-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.bell-icon {
+    margin-left: 20px;
+    position: relative;
+    font-size: 1.5rem;
+    margin-right: 50px;
+}
+
+.notification-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: white;
+    color: red;
+    border-radius: 50%;
+    padding: 3px 5px;
+    font-size: 0.8rem;
+    margin-right: 35px;
+}
+
+.notification {
+    position: relative;
+}
+
+.user-account {
+    font-size: 0.9rem;
+    color: yellow;
+}
+
+.user-name .check-icon {
+    margin-left: 5px;
+    color: yellow;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.arrow
+{
+    color: red;
+}
