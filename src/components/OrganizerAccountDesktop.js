@@ -4,9 +4,9 @@ import './OrganizerAccountDesktop.css';
 import LogoSVG from '../assets/photos/svg/header_logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faUser, faBell, faCheck, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import Settings from '../components/Settings'; // Ensure this path is correct
-import Support from '../components/Support'; // Ensure this path is correct
-import Footer from '../components/Footer'; // Import the Footer component
+import Settings from '../components/Settings';
+import Support from '../components/Support';
+import Footer from '../components/Footer';
 
 const OrganizerAccountDesktop = () => {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -1,5 +1,4 @@
 import React from 'react';
-import InnerBody from '../components/Innerbody.js';
 import './Support.css';
 import contactImage from '../assets/photos/Image.png';
 

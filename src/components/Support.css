@@ -1,150 +1,146 @@
-*{
+* {
     background: black;
-    padding:0;
-    margin:0;
-}
-.flex{
-    display:flex;
-    align-items:center;
-}
-.supportPage{
-   margin: 20px;
-
-    h2{
-        color:red;
-        font-weight: bold;
-        padding-bottom: 20px;
-        font-size: 30px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .supportPage {
+    margin: 2px;
+  
+    h2 {
+      color: red;
+      font-weight: bold;
+      padding-bottom: 20px;
+      font-size: 30px;
     }
-    
-    p{
-        color: white;
-        font-size: 20px;
+  
+    p {
+      color: white;
+      font-size: 20px;
     }
-
-    
-    .container{
-        height: 100%;
-        width: 60%;
-        margin: auto;
-        justify-content: space-between;
+  
+    .container {
+      height: 100%;
+      width: calc(100% - 290px); /* Adjust width based on sidebar and margin */
+      margin-left: 5px; /* 10px space between sidebar and content */
+      justify-content: space-between;
+      border-radius: 10px;
+      color: black;
+  
+      .imageDiv {
+        position: relative;
+        display: flex;
+        flex-basis: 50%;
+        width: 70%;
+        height: 100vh;
+        padding: 0 1.5rem;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
         border-radius: 10px;
-        color: black;
-
-        .imageDiv{
-            position: relative;
-            display: flex;
-            flex-basis: 50%;
-            width: 70%;
-            height: 100vh;
-            padding:0 1.5rem;
-            text-align: center;
-            justify-content: center;
-            flex-direction: column;
-            margin: auto;
-            border-radius:10px ;
-            overflow: hidden;
-
-            contactImage{
-                height:100%;
-                width: 100%;
-                object-fit: cover;
-                top:0;
-                bottom: 0;
-                right: 0;
-                left: 0;
-            }
-
-            img{
-                height: 66%;
-            }
+        overflow: hidden;
+  
+        contactImage {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
         }
-        .contactsDiv{
-            flex-basis: 50%;
-            margin: auto;
-            margin-left: 30px;
-            flex-direction: column;
-            gap: 1.5rem ;
-            transform: translate(-1rem);
-            background: black;
-
-            .contactUs{
-                margin-top: 40px;
-                margin-bottom: 30px;
-                height: 16vh;
-                width: 100%;
-                border: 1px solid white;
+  
+        img {
+          height: 66%;
+        }
+      }
+  
+      .contactsDiv {
+        flex-basis: 50%;
+        margin: auto;
+        margin-left: 30px;
+        flex-direction: column;
+        gap: 1.5rem;
+        transform: translate(-1rem);
+        background: black;
+  
+        .contactUs {
+          margin-top: 40px;
+          margin-bottom: 30px;
+          height: 16vh;
+          width: 100%;
+          border: 1px solid white;
+          background-color: hsl(0, 0%, 91%);
+          padding: 20px;
+          text-align: justify;
+  
+          .textDiv {
+            text-align: start;
+            padding: 10px;
+  
+            p {
+              font-size: 20px;
+              background-color: hsl(0, 0%, 91%);
+              color: black;
+  
+              span {
                 background-color: hsl(0, 0%, 91%);
-                padding: 20px;
-                text-align: justify;
-        
-               
-                .textDiv{
-                    text-align: start;
-                    padding: 10px;
-                    p{
-                        font-size: 20px;
-                        background-color: hsl(0, 0%, 91%);
-                        color: black;
-                        span{
-                            background-color: hsl(0, 0%, 91%);
-                            color: red;
-                            font-size: 20px;
-                        }
-                    }
-                }
-                
-               
+                color: red;
+                font-size: 20px;
+              }
             }
+          }
         }
-        
+      }
     }
-   
-}
-
-@media screen and (max-width: 927px) {
-    .supportPage{
-        .container{
-           
-            width: 85%;
+  }
+  
+  @media screen and (max-width: 927px) {
+    .supportPage {
+      .container {
+        width: 85%;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 678px) {
+    .supportPage {
+      .container {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        padding: 1.5rem;
+  
+        .imageDiv {
+          width: 100%;
         }
-    }    
-}
-
-@media screen and (max-width: 678px) {
-    .supportPage{
-        .container{
-            height: 100%;
-            width: 100%;
-            flex-direction: column;
-            padding: 1.5rem;
-
-            .imageDiv{
-                width: 100%;
-
+  
+        .contactsDiv {
+          gap: 1rem;
+          transform: translateY(-0.5rem);
+  
+          .headerDiv {
+            padding: 1rem 0;
+  
+            h2 {
+              font-size: 20px;
             }
-            .contactsDiv{
-                gap: 1rem;
-                transform: translateY(-.5rem);
-
-                .headerDiv{
-                    padding: 1rem 0;
-
-
-                    h2{
-                        font-size: 20px;
-                    }
-                }
-                .contactUs{
-                    gap: .5rem;
-
-                    .textDiv{
-                        
-                          width: 100%;  
-                       
-                    }
-                }
+          }
+  
+          .contactUs {
+            gap: 0.5rem;
+  
+            .textDiv {
+              width: 100%;
             }
+          }
         }
-    }    
-}
+      }
+    }
+  }
+  

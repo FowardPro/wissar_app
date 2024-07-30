@@ -1,11 +1,14 @@
-/* Existing styles... */
-
-.organizer-container {
+/* General styles */
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .organizer-container {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-color: #000; /* Changed to black */
-    padding: 2px;
+    padding: 0; /* Removed padding */
     z-index: 1000;
     overflow: hidden;
   }
@@ -14,7 +17,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000;
     z-index: 1100;
     height: 100px;
     position: fixed;
@@ -34,14 +36,13 @@
     position: fixed;
     top: 100px;
     left: 0;
-    background-color: black;
     width: 280px;
     height: calc(100% - 100px);
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform: translateX(-100%);
     opacity: 0;
     z-index: 1100;
-    margin-top: 3px;
+    margin-top: 0; /* Removed margin-top */
   }
   
   .menu-dropdown.open {
@@ -138,9 +139,10 @@
   .content {
     padding-top: 100px; /* Adjust based on header height */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align content to start */
     width: 100%;
     transition: transform 0.3s ease;
+    margin-top: 0; /* Ensures no space between content and header */
   }
   
   .content.slide-in {
@@ -148,13 +150,16 @@
   }
   
   .settings {
-    background-color: black;
     color: white;
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
-    width: 100%;
-    margin-top: 20px; /* Add margin to provide space between content sections */
+    width: calc(100% - 290px); /* Adjust width based on sidebar and margin */
+    margin-left: 2px; /* 10px space between sidebar and content */
+  }
+  
+  .supportPage {
+    margin-left: 2px;
   }
   
   .section {
@@ -167,20 +172,24 @@
     margin-bottom: 10px;
   }
   
-  label {
-    display: block;
+  .form-group {
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    flex: 0 0 150px; /* Adjust the label width as needed */
+    margin-right: 10px;
     font-size: 18px;
   }
   
-  input {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+  .form-group input {
+    flex: 1;
+    padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #666;
+    background-color: #888; /* Adjusted background color */
     color: white;
     font-size: 16px;
   }

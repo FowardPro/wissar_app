@@ -1,16 +1,15 @@
-// src/components/Settings.js
 import React, { useState } from 'react';
-import '../components/Setting.css';
+import './Setting.css';
 
 const Settings = () => {
   const [formData, setFormData] = useState({
-    firstName: 'Foward',
-    lastName: 'Nkuna',
-    companyName: 'FowardTeck',
-    email: 'fowardnkuna6@gmail.com',
-    currentPassword: '222222222',
-    newPassword: '22222222222',
-    confirmPassword: '22222222222'
+    firstName: 'Oamogetswe',
+    lastName: 'Makgopela',
+    companyName: 'Capitec',
+    email: 'opmakgopela@gmail.com',
+    currentPassword: '',
+    newPassword: '',
+    confirmPassword: ''
   });
 
   const handleChange = (e) => {
@@ -28,75 +27,75 @@ const Settings = () => {
       <form onSubmit={handleSubmit}>
         <div className="section">
           <h2>Update Personal Details:</h2>
-          <label>
-            First Name :
+          <div className="form-group">
+            <label>First Name :</label>
             <input 
               type="text" 
               name="firstName" 
               value={formData.firstName} 
               onChange={handleChange} 
             />
-          </label>
-          <label>
-            Last Name :
+          </div>
+          <div className="form-group">
+            <label>Last Name :</label>
             <input 
               type="text" 
               name="lastName" 
               value={formData.lastName} 
               onChange={handleChange} 
             />
-          </label>
-          <label>
-            Company Name :
+          </div>
+          <div className="form-group">
+            <label>Company Name :</label>
             <input 
               type="text" 
               name="companyName" 
               value={formData.companyName} 
               onChange={handleChange} 
             />
-          </label>
-          <label>
-            Email address:
+          </div>
+          <div className="form-group">
+            <label>Email address:</label>
             <input 
               type="email" 
               name="email" 
               value={formData.email} 
               onChange={handleChange} 
             />
-          </label>
+          </div>
         </div>
         <div className="section">
           <h2>Change Password:</h2>
-          <label>
-            Current Password:
+          <div className="form-group">
+            <label>Current Password:</label>
             <input 
               type="password" 
               name="currentPassword" 
               value={formData.currentPassword} 
               onChange={handleChange} 
             />
-          </label>
-          <label>
-            New Password:
+          </div>
+          <div className="form-group">
+            <label>New Password:</label>
             <input 
               type="password" 
               name="newPassword" 
               value={formData.newPassword} 
               onChange={handleChange} 
             />
-          </label>
-          <label>
-            Confirm Password:
+          </div>
+          <div className="form-group">
+            <label>Confirm Password:</label>
             <input 
               type="password" 
               name="confirmPassword" 
               value={formData.confirmPassword} 
               onChange={handleChange} 
             />
-          </label>
+          </div>
         </div>
         <div className="buttons">
-          <button type="submit">Save</button>
+          <button type="submit">Update</button>
           <button type="button">Logout</button>
         </div>
       </form>
