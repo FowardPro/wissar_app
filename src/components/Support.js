@@ -1,6 +1,5 @@
 import React from 'react';
-import InnerBody from '../components/Innerbody';
-
+import InnerBody from '../components/Innerbody.js';
 
 const Support = ({ isScrolled, menuOpen }) => {
     return (
