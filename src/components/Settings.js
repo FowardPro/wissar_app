@@ -4,13 +4,13 @@ import '../components/Setting.css';
 
 const Settings = () => {
   const [formData, setFormData] = useState({
-    firstName: 'Oamogetswe',
-    lastName: 'Makgopela',
-    companyName: 'Capitec',
-    email: 'opmakgopela@gmail.com',
-    currentPassword: '',
-    newPassword: '',
-    confirmPassword: ''
+    firstName: 'Foward',
+    lastName: 'Nkuna',
+    companyName: 'FowardTeck',
+    email: 'fowardnkuna6@gmail.com',
+    currentPassword: '222222222',
+    newPassword: '22222222222',
+    confirmPassword: '22222222222'
   });
 
   const handleChange = (e) => {
