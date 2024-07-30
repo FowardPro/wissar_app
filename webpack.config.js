@@ -1,14 +1,27 @@
-const path = require('path');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   module: {
     rules: [
       {
-        test: /\.svg$/,
-        use: ['@svgr/webpack'],
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            plugins: [
+              require('react-refresh/babel')
+            ],
+          },
+        },
       },
-      // other rules...
     ],
   },
-  // other configurations...
+  plugins: [
+    new ReactRefreshWebpackPlugin(),
+  ],
+  devServer: {
+    hot: true,
+  },
 };
