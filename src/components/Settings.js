@@ -23,7 +23,7 @@ const Settings = () => {
   };
 
   return (
-    <div className="settings">
+    <div className="settings-container">
       <form onSubmit={handleSubmit}>
         <div className="section">
           <h2>Update Personal Details:</h2>
@@ -95,7 +95,7 @@ const Settings = () => {
           </div>
         </div>
         <div className="buttons">
-          <button type="submit">Update</button>
+          <button type="submit">Save</button>
           <button type="button">Logout</button>
         </div>
       </form>

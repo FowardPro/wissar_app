@@ -63,7 +63,8 @@
     width: 80%;
   }
   
-  .menu-item:hover {
+  .menu-item:hover,
+  .menu-item:hover .arrow {
     background-color: #b3b3b3;
     transition: 0.5s ease-in-out;
   }
@@ -134,6 +135,7 @@
   
   .arrow {
     color: red;
+    background-color: white;
   }
   
   .content {

@@ -1,11 +1,11 @@
+/* src/components/Settings.css */
 .settings {
     background-color: black;
     color: white;
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
-    width: 100%;
-    margin-top: 0; /* Ensures no space between content sections */
+    margin: auto;
   }
   
   .section {
@@ -31,7 +31,7 @@
     margin-top: 5px;
     border: none;
     border-radius: 5px;
-    background-color: #b3b0b0;
+    background-color: #666;
     color: white;
     font-size: 16px;
   }
@@ -52,6 +52,6 @@
   }
   
   button:hover {
-    background-color: #9c9999;
+    background-color: #666;
   }
   
