@@ -7,6 +7,7 @@ import { faBars, faUser, faBell, faCheck, faChevronRight } from '@fortawesome/fr
 import Settings from '../components/Settings';
 import Support from '../components/Support';
 import Footer from '../components/Footer';
+import ManageEvent from '../components/ManageEvent';
 
 const OrganizerAccountDesktop = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -57,7 +58,7 @@ const OrganizerAccountDesktop = () => {
           <FontAwesomeIcon icon={faBars} className="burger-icon" onClick={toggleMenu} />
           <div className={`menu-dropdown ${menuOpen ? 'open' : ''}`}>
             <Link to="/create-event" className="menu-item">CREATE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
-            <Link to="/manage-event" className="menu-item">MANAGE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
+            <Link to="/manage-event" onClick={handleSupportClick} className="menu-item">MANAGE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/support" onClick={handleSupportClick} className="menu-item">SUPPORT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/settings" onClick={handleSettingsClick} className="menu-item">SETTINGS <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
           </div>
@@ -86,6 +87,8 @@ const OrganizerAccountDesktop = () => {
             <Routes>
               <Route path="/settings" element={<Settings isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/support" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
+              <Route path="/manageEvent" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
+
               {/* Add more routes as needed */}
             </Routes>
           )}

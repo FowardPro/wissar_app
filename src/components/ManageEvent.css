@@ -1,0 +1,70 @@
+body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .event-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d3d0d0;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-info h2 {
+    font-size: 18px;
+    margin: 0;
+    margin-left:-30px;
+  }
+  
+  .event-info p {
+    margin: 5px 0 0 0;
+    color: #666;
+   
+  }
+  
+  .edit-button {
+    background-color: rgb(248, 242, 242);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .edit-button svg {
+    fill: #080808;
+  }
+  
+  .saved-events-button {
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .saved-events-button:hover {
+    background-color: #e0e0e0;
+  }
+  
