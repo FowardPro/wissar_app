@@ -95,7 +95,7 @@ const Settings = () => {
           </div>
         </div>
         <div className="buttons">
-          <button type="submit">Save</button>
+          <button type="submit">Update</button>
           <button type="button">Logout</button>
         </div>
       </form>

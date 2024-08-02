@@ -1,0 +1,252 @@
+/* General Page Styles */
+.registerPage, .loginPage {
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 7px 50px rgba(214, 223, 213, 0.7); /* Softer shadow with opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9; /* Light background for the page */
+}
+
+/* Container Style */
+.container {
+    display: flex;
+    height: 70vh; /* Adjusted height for a more compact fit */
+    width: 80%; /* Adjusted width for better fitting */
+    max-width: 900px; /* Maximum width for responsiveness */
+    justify-content: space-between;
+    border-radius: 10px;
+    background: hsl(0, 0%, 91%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle container shadow */
+    padding: 0.5rem; /* Reduced padding for a tighter fit */
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+/* Image Div Style */
+.imagediv {
+    flex: 1;
+    padding: 0.5rem; /* Reduced padding */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Image Style */
+.imagediv img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Cover the entire div */
+    border-radius: 10px; /* Match border-radius with parent container */
+}
+
+/* Form Division Style */
+.formDiv {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    gap: 1rem; /* Gap between form elements and headings */
+    padding: 1rem; /* Padding for form */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Header with Icon Style */
+.headerWithIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* Space between heading and icon */
+}
+
+/* Icon Style */
+.loginIcon {
+    color: #007bff; /* Customize the icon color */
+}
+
+.registerIcon {
+    color: #007bff; /* Customize the icon color */
+}
+
+/* Event Organizer Heading Style */
+.eventOrganizer {
+    text-align: center;
+    font-size: 1.25rem; /* Adjust font size as needed */
+    margin-top: 0.5rem; /* Space above the heading */
+    margin-bottom: 2rem; /* Space below the heading to separate it from the form */
+}
+
+/* Form Group Style */
+.form-group {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 1rem; /* Space between label and input */
+    margin: 5px 0; /* Margin for spacing between groups */
+}
+
+/* Block Container Style */
+.block {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    margin: 1rem 0; /* Margin between blocks */
+    padding: 0.5rem; /* Padding inside each block */
+    border: 1px solid #ccc; /* Border around the block */
+    border-radius: 4px; /* Rounded corners for the block */
+    background-color: #fff; /* White background for the block */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the block */
+}
+
+/* Label Style */
+.block label {
+    margin-right: 1rem; /* Space between label and input */
+    font-size: 1rem; /* Font size for the label */
+    color: #333; /* Text color for the label */
+    font-weight: bold; /* Bold font for the label */
+    width: 150px; /* Fixed width for label */
+    text-align: right; /* Align text to the right */
+}
+
+/* Input Style */
+.block input[type="text"], .block input[type="email"], .block input[type="password"] {
+    padding: 0.5rem; /* Padding inside the input */
+    border: 1px solid #ccc; /* Border around the input */
+    border-radius: 4px; /* Rounded corners for the input */
+    font-size: 1rem; /* Font size inside the input */
+    width: 100%; /* Full width of the input */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Form Group Label Style */
+.form-group label {
+    font-size: 0.875rem; /* Smaller font-size for consistency */
+    color: var(--greyText); /* Adjust color if needed */
+    width: 150px; /* Fixed width for label */
+    text-align: right; /* Align text to the right */
+}
+
+/* Input Style */
+input.control-form {
+    width: 100%; /* Full width for input */
+    padding: 0.4rem; /* Further reduced padding for better fit */
+    border-radius: 4px; /* Slightly smaller border-radius */
+    border: 1px solid var(--greyText);
+    font-size: 0.75rem; /* Smaller font-size for compactness */
+}
+
+/* Button Base Style */
+button {
+    padding: 0.5rem 1rem; /* Reduced padding for a smaller button */
+    border: none;
+    border-radius: 4px; /* Slightly smaller border-radius */
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    cursor: pointer;
+    font-size: 0.875rem; /* Smaller font-size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Smaller shadow for a subtle effect */
+}
+
+/* Button Hover Style */
+button:hover {
+    background-color: var(--hoverColor); /* Change background on hover */
+    transform: scale(1.03); /* Slightly enlarge on hover */
+}
+
+/* Button Active Style */
+button:active {
+    transform: scale(0.97); /* Slightly shrink on click */
+}
+
+/* Heading Style */
+h1 {
+    text-align: center;
+    font-size: 1.5rem; /* Adjust font-size for heading */
+    margin: 0; /* Remove margin */
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.25rem; /* Adjust font-size for heading */
+    margin: 0; /* Remove margin */
+}
+
+/* Header Style */
+#header {
+    text-align: center;
+    margin-bottom: 1rem; /* Reduced margin below header */
+}
+
+/* Navigation Button Styles */
+.nav_button {
+    padding: 0.5rem 1rem; /* Reduced padding for button appearance */
+    border: 1px solid var(--primaryColor); /* Border matching primary color */
+    border-radius: 4px; /* Rounded corners for a modern look */
+    background-color: var(--whiteColor); /* White background */
+    color: var(--primaryColor); /* Primary color text */
+    text-decoration: none; /* Remove underline */
+    font-size: 0.875rem; /* Smaller font-size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    display: inline-block; /* Inline-block for alignment */
+    margin: 0.25rem 0; /* Reduced margin for spacing */
+}
+
+/* Navigation Button Hover Style */
+.nav_button:hover {
+    background-color: var(--primaryColor); /* Change background on hover */
+    color: var(--whiteColor); /* Change text color on hover */
+}
+
+/* Button for Register Link */
+.btn-register {
+    display: inline-block;
+    padding: 0.4rem 0.8rem; /* Reduced padding */
+    border: none;
+    border-radius: 4px; /* Smaller border-radius */
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    cursor: pointer;
+    font-size: 0.875rem; /* Smaller font-size */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover and click effects */
+}
+
+.btn-register:hover {
+    background-color: var(--hoverColor); /* Change background on hover */
+    transform: scale(1.03); /* Slightly enlarge on hover */
+}
+
+.btn-register:active {
+    transform: scale(0.97); /* Slightly shrink on click */
+}
+
+/* Optional: Add responsiveness for smaller screens */
+@media (max-width: 600px) {
+    .block {
+        margin: 0.5rem 0; /* Reduced margin for smaller screens */
+        padding: 0.25rem; /* Reduced padding for smaller screens */
+    }
+
+    .block label {
+        font-size: 0.875rem; /* Smaller font size for labels */
+        width: auto; /* Allow width to adjust based on content */
+        text-align: left; /* Align text to the left */
+    }
+
+    .block input[type="text"], .block input[type="email"], .block input[type="password"] {
+        font-size: 0.875rem; /* Smaller font size for inputs */
+    }
+}
