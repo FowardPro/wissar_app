@@ -2,7 +2,7 @@
 .manage-event-body{
   background-color: black;
   width: 100%;
-  padding-bottom: 200px;
+  padding-bottom: 320px;
   margin-top: -60px;
   
 
@@ -10,7 +10,6 @@
 .manage-events-container {
   background-color: white;
   width: 400px;
- 
   padding: 20px;
   text-align: center;
   border: 1px solid #ccc;
