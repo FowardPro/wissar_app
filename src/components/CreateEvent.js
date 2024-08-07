@@ -1,7 +1,6 @@
 import React from 'react'
 import './CreateEvent.css'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faPlusCircle } from '@fortawesome/free-regular-svg-icons';
+import { FiPlusCircle } from "react-icons/fi";
 
 const CreateEvent = () => {
   return (
@@ -39,7 +38,7 @@ const CreateEvent = () => {
         <div className="form-group">
           <label htmlFor="lineUp">Line up:</label>
           <input type="text" id="lineUp" name="lineUp" />
-          {/* <FontAwesomeIcon icon={faPlusCircle} className="plus-icon" /> */}
+          <FiPlusCircle size={25} className="plus-icon"/>
         </div>
         </div>
         
