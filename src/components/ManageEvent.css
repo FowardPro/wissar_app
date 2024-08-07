@@ -2,8 +2,8 @@
 .manage-event-body{
   background-color: black;
   width: 100%;
-  padding-bottom: 320px;
-  margin-top: -60px;
+  padding-bottom: 100px;
+  margin-top: -10px;
   
 
 }
@@ -18,11 +18,14 @@
   margin-left: 5%;
   width: calc(60% + 5px);
   margin-top: 40px;
+  height: auto;
+  min-height: 500px;
+  
 }
 
 h2 {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -30,7 +33,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
   margin-bottom: 10px;
   background-color: #83828252;
   border-radius: 5px;
@@ -38,7 +41,8 @@ h2 {
 
 .event-details h3 {
   margin: 0px;
-  font-size: 18px;
+  margin-left: -30px;
+  font-size: 24px;
   font-weight: bold;
   color: #504f4f;
  
@@ -48,7 +52,9 @@ h2 {
 
 .event-details p {
   margin: 5px 0 0;
-  font-size: 14px;
+  margin-left: -25px;
+  font-size: 18px;
+  
   color: #666;
 }
 
