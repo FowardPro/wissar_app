@@ -177,15 +177,6 @@
     padding-left: 70px;
   }
   
-  .form-group input {
-    flex: 1;
-    padding-right: 300px;
-    border: none;
-    border-radius: 15px;
-    background-color: #bdbdbd; /* Adjusted background color */
-    color: white;
-    font-size: 16px;
-  }
   
   .heading {
     font-family: Bernard MT Condensed;
