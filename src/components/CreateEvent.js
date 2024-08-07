@@ -1,7 +1,7 @@
 import React from 'react'
 import './CreateEvent.css'
 import { FiPlusCircle } from "react-icons/fi";
-// import {  Link } from 'react-router-dom';
+  import {  Link } from 'react-router-dom';
 // import ManageEvent from '../components/ManageEvent';
 
 const CreateEvent = () => {
@@ -48,9 +48,9 @@ const CreateEvent = () => {
         </div>
         
         <div className="button-container">
-          
-           <button type="submit">Submit</button>
-          
+          <Link to={'/manageevent'}>
+          <button type="submit">Submit</button>
+          </Link>
         </div>
       </form>
     </div>
