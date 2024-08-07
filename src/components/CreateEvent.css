@@ -136,22 +136,25 @@ width: 100%;
     border-radius: 8px;
     display: flex;
     justify-content: center;
-  }
-  
-  button {
-    padding: 10px 20px;
-    border: 1px solid white;
-    border-radius: 4px;
-    background-color: #4e4e4e;
-    color: rgb(129, 129, 129);
-    font-size: 16px;
-    cursor: pointer;
+ 
+    button {
+      padding: 10px 20px;
+      border: 1px solid white;
+      border-radius: 4px;
+      background-color: #4e4e4e;
+      color: rgb(129, 129, 129);
+      font-size: 16px;
+      cursor: pointer;
+     
+    }
    
-  }
-  
   button:hover {
     background-color: #555;
   }
+  }
+ 
+     
+  
 
   @media (max-width: 600px) {
     .form-container {
