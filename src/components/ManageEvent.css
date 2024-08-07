@@ -1,0 +1,76 @@
+.manage-events-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 5px;
+  width: calc(60% + 5px);
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.event-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: #83828252;
+  border-radius: 5px;
+}
+
+.event-details h3 {
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #c7c0c0;
+ 
+  
+  
+}
+
+.event-details p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.edit-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  filter: invert(1) brightness(0.8); /* Invert to white and adjust brightness to gray */
+
+
+}
+
+.saved-events-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.saved-events-button:hover {
+  background-color: #f0f0f0;
+}
+
+.manage-events-container h2 {
+  color: white; /* Change the header color to white */
+}
+
+

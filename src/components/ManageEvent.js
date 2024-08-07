@@ -1,46 +1,49 @@
 import React from 'react';
 import './ManageEvent.css';
 
-const ManageEvents = () => {
-  return (
-    <div className="container">
-      <h1 className="title">Manage Your Events</h1>
-      <div className="event-card">
-        <div className="event-info">
-          <h2>Event Name:</h2>
-          <p>Event information...</p>
+const ManageEvent = () => {
+    return (
+        <div className="manage-events-container">
+            <h2>Manage Your Events</h2>
+            <div className="event-card">
+                <div className="event-details">
+                    <h3>Event Name:</h3>
+                    <p>Event information...</p>
+                </div>
+                <div className="edit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 20H21"></path>
+                        <path d="M16.5 3.5L20.5 7.5 7 21 3 21 3 17z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div className="event-card">
+                <div className="event-details">
+                    <h3>Event Name:</h3>
+                    <p>Event information...</p>
+                </div>
+                <div className="edit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 20H21"></path>
+                        <path d="M16.5 3.5L20.5 7.5 7 21 3 21 3 17z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div className="event-card">
+                <div className="event-details">
+                    <h3>Event Name:</h3>
+                    <p>Event information...</p>
+                </div>
+                <div className="edit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 20H21"></path>
+                        <path d="M16.5 3.5L20.5 7.5 7 21 3 21 3 17z"></path>
+                    </svg>
+                </div>
+            </div>
+            <button className="saved-events-button">Saved Events</button>
         </div>
-        <button className="edit-button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M21.7,6.3c0.4-0.4,0.4-1,0-1.4l-2.6-2.6c-0.4-0.4-1-0.4-1.4,0l-10,10V16h3.7L21.7,6.3z M17,3l4,4L8.7,19.3H4v-4.7L17,3z" />
-          </svg>
-        </button>
-      </div>
-      <div className="event-card">
-        <div className="event-info">
-          <h2>Event Name:</h2>
-          <p>Event information...</p>
-        </div>
-        <button className="edit-button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M21.7,6.3c0.4-0.4,0.4-1,0-1.4l-2.6-2.6c-0.4-0.4-1-0.4-1.4,0l-10,10V16h3.7L21.7,6.3z M17,3l4,4L8.7,19.3H4v-4.7L17,3z" />
-          </svg>
-        </button>
-      </div>
-      <div className="event-card">
-        <div className="event-info">
-          <h2>Event Name:</h2>
-          <p>Event information...</p>
-        </div>
-        <button className="edit-button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M21.7,6.3c0.4-0.4,0.4-1,0-1.4l-2.6-2.6c-0.4-0.4-1-0.4-1.4,0l-10,10V16h3.7L21.7,6.3z M17,3l4,4L8.7,19.3H4v-4.7L17,3z" />
-          </svg>
-        </button>
-      </div>
-      <button className="saved-events-button">Saved Events</button>
-    </div>
-  );
-};
+    );
+}
 
-export default ManageEvents;
+export default ManageEvent;

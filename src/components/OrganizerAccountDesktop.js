@@ -14,11 +14,13 @@ const OrganizerAccountDesktop = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [showSupport, setShowSupport] = useState(false);
+  const [showManageEvent, setShowManageEvent] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
     setShowSettings(false);
     setShowSupport(false);
+    setShowManageEvent(false);
   };
 
   const handleScroll = () => {
@@ -36,12 +38,21 @@ const OrganizerAccountDesktop = () => {
     setShowSettings(true);
     setShowSupport(false);
     setMenuOpen(true);
+    setShowManageEvent(false);
   };
 
   const handleSupportClick = () => {
     setShowSupport(true);
     setShowSettings(false);
     setMenuOpen(true);
+    setShowManageEvent(false);
+  };
+
+  const handleManageEventClick = () => {
+    setShowSupport(false);
+    setShowSettings(false);
+    setMenuOpen(true);
+    setShowManageEvent(true);
   };
 
   useEffect(() => {
@@ -58,7 +69,7 @@ const OrganizerAccountDesktop = () => {
           <FontAwesomeIcon icon={faBars} className="burger-icon" onClick={toggleMenu} />
           <div className={`menu-dropdown ${menuOpen ? 'open' : ''}`}>
             <Link to="/create-event" className="menu-item">CREATE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
-            <Link to="/manage-event" onClick={handleSupportClick} className="menu-item">MANAGE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
+            <Link to="/manage-event" onClick={handleManageEventClick} className="menu-item">MANAGE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/support" onClick={handleSupportClick} className="menu-item">SUPPORT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/settings" onClick={handleSettingsClick} className="menu-item">SETTINGS <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
           </div>
@@ -79,19 +90,26 @@ const OrganizerAccountDesktop = () => {
         </header>
 
         <div className={`content ${menuOpen ? 'slide-in' : ''}`}>
-          {showSettings ? (
+          {
+          showSettings ? (
             <Settings isScrolled={isScrolled} menuOpen={menuOpen} />
-          ) : showSupport ? (
+          ) 
+          : showSupport ? (
             <Support isScrolled={isScrolled} menuOpen={menuOpen} />
-          ) : (
+          ) 
+          : showManageEvent ? (
+            <ManageEvent isScrolled={isScrolled} menuOpen={menuOpen} />
+          ) :
+          (
             <Routes>
               <Route path="/settings" element={<Settings isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/support" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
-              <Route path="/manageEvent" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
+              <Route path="/manageEvent" element={<ManageEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
 
               {/* Add more routes as needed */}
             </Routes>
-          )}
+          )
+          }
         </div>
 
         <Footer />
