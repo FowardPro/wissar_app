@@ -3,7 +3,8 @@ import './ManageEvent.css';
 
 const ManageEvent = () => {
     return (
-        
+        <div>
+    {/*<div className="heading">Support</div>*/}
         <div className="manage-event-body">
            
         <div className="manage-events-container">
@@ -45,6 +46,7 @@ const ManageEvent = () => {
                 </div>
             </div>
             <button className="saved-events-button">Saved Events</button>
+        </div>
         </div>
         </div>
     );

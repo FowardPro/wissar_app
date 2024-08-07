@@ -27,14 +27,13 @@
   input {
     color: black;
     display: block;
-    width: 100%;
-    padding: 8px;
+    padding: 5px;
     margin-top: 5px;
     border-radius: 10px;
     background-color: #bdb9b9;
     color: white;
     font-size: 16px;
-    
+    padding-left: 15px;
   }
   
   .buttons {
@@ -58,4 +57,5 @@
   button:hover {
     background-color: #a39f9f;
   }
+
   
