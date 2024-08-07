@@ -34,6 +34,7 @@
     color: white;
     font-size: 16px;
     padding-left: 15px;
+    margin-left: 100px;
   }
   
   .buttons {
@@ -44,18 +45,17 @@
   }
   
   button {
-    
-    padding: 10px 20px;
+   padding: 10px 20px;
     border: none;
     border-radius: 15px;
-    background-color: #444;
+    background-color: #c4c4c4;
     color: white;
     cursor: pointer;
     font-size: 16px;
   }
   
   button:hover {
-    background-color: #a39f9f;
+    background-color: #a1a1a1;
   }
 
   
