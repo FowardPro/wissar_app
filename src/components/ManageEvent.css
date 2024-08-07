@@ -1,14 +1,24 @@
+
+.manage-event-body{
+  background-color: black;
+  width: 100%;
+  padding-bottom: 200px;
+  margin-top: -60px;
+  
+
+}
 .manage-events-container {
   background-color: white;
   width: 400px;
-  margin: 0 auto;
+ 
   padding: 20px;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin-left: 5px;
+  margin-left: 5%;
   width: calc(60% + 5px);
+  margin-top: 40px;
 }
 
 h2 {
@@ -31,7 +41,7 @@ h2 {
   margin: 0px;
   font-size: 18px;
   font-weight: bold;
-  color: #c7c0c0;
+  color: #504f4f;
  
   
   
@@ -70,7 +80,7 @@ h2 {
 }
 
 .manage-events-container h2 {
-  color: white; /* Change the header color to white */
+  color: rgb(29, 28, 28); /* Change the header color to white */
 }
 
 
