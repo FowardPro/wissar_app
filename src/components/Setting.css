@@ -25,13 +25,13 @@
   }
   
   input {
+    color: black;
     display: block;
     width: 100%;
     padding: 8px;
     margin-top: 5px;
-    border: none;
     border-radius: 10px;
-    background-color: #666;
+    background-color: #bdb9b9;
     color: white;
     font-size: 16px;
     
