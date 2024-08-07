@@ -1,0 +1,127 @@
+.createEventPage {
+background-color: black;
+height: 100vh;
+width: 100%;
+}
+
+.form-container{
+  background-color: black;
+  margin: auto;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Increased by 500 pixels */
+  width: 100%;
+  max-height: 1200px; /* Added a max-height */
+
+
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+form {
+    display: flex;
+    flex-direction: column;
+  }
+  .inputs-div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    max-width: 600px; /* Increased by 500 pixels */
+    max-height: 1000px; /* Added a max-height */
+
+    label{
+        color: #555;
+    }
+
+    input,
+    textarea {
+      flex: 2;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #ccc;
+    }
+   
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    color: black;
+    flex: 1;
+    margin-right: 10px;
+    white-space: nowrap; /* Prevent label words from wrapping */
+  }
+
+ 
+
+textarea {
+  resize: vertical;
+}
+
+.lineup-group {
+  display: flex;
+  align-items: center;
+}
+
+.lineup-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.button-container {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    padding: 15px 50px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 20px;
+    }
+  
+    .inputs-div {
+      padding: 10px;
+    }
+  
+    .form-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    label {
+      margin-bottom: 5px;
+      margin-right: 0;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
