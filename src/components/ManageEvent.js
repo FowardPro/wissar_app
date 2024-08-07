@@ -5,9 +5,10 @@ const ManageEvent = () => {
     return (
         <div className="mange-event-main-container">
            
-        <div className="heading">Manage Event</div>
+        <div className="heading">Manage Events</div>
+        
         <div className="manage-event-body">
-           <center>
+           
         <div className="manage-events-container">
             <h2>Manage Your Events</h2>
             <div className="event-card">
@@ -48,7 +49,7 @@ const ManageEvent = () => {
             </div>
             <button className="saved-events-button">Saved Events</button>
         </div>
-        </center>
+        
         </div>
         </div>
     );
