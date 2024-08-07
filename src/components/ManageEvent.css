@@ -1,11 +1,11 @@
 .manage-events-container {
+  background-color: white;
   width: 400px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #f9f9f9;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin-left: 5px;
   width: calc(60% + 5px);

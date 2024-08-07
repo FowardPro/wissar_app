@@ -1,5 +1,8 @@
+.header-container{
+  background: black;
+}
 .header {
-  background-color: black;
+  background: black;
   color: white;
   padding: 1rem 0;
   width: 100%;

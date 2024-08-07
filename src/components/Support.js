@@ -4,6 +4,7 @@ import contactImage from '../assets/photos/Image.png';
 
 function Support() {
   return (
+    <div className="support-cotainer">
     <div className="supportPage flex">
       <div className="container flex">
         <div className="imageDiv">
@@ -40,6 +41,7 @@ function Support() {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 }

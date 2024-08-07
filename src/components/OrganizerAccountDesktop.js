@@ -63,6 +63,7 @@ const OrganizerAccountDesktop = () => {
   }, []);
 
   return (
+    <div className='organiser-container'>
     <Router>
       <div className="organizer-container">
         <header className="organizer-header">
@@ -115,6 +116,7 @@ const OrganizerAccountDesktop = () => {
         <Footer />
       </div>
     </Router>
+    </div>
   );
 };
 

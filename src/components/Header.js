@@ -23,6 +23,7 @@ const Header = () => {
   }, []);
 
   return (
+    <div className="header-container">
    <div className='header_bottom_line'>
     <header className={`header ${isSticky ? 'sticky' : ''}`}>
       <div className="container">
@@ -46,6 +47,7 @@ const Header = () => {
       </div>
     </header>
     </div>  
+    </div>
   );
 };
 
