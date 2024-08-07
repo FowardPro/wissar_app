@@ -38,7 +38,10 @@ const CreateEvent = () => {
         <div className="form-group">
           <label htmlFor="lineUp">Line up:</label>
           <input type="text" id="lineUp" name="lineUp" />
-          <FiPlusCircle size={25} className="plus-icon"/>
+          <div className="plus-icon">
+          <FiPlusCircle size={25} />
+          </div>
+          
         </div>
         </div>
         

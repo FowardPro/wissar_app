@@ -40,6 +40,9 @@ form {
 
     label{
         color: #555;
+        flex: 1;
+        margin-right: 10px;
+        white-space: nowrap;
     }
 
     input,
@@ -51,10 +54,14 @@ form {
       background-color: #bdb9b9;
     }
 
-    .plus-icon{
-     margin-left: 10px;
-     margin-top: 5px;
-    }
+      .plus-icon{
+        margin-left: 10px;
+        margin-top: 5px;
+        display: flex;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }  
    
   }
   
@@ -64,17 +71,18 @@ form {
     margin-bottom: 20px;
   }
   
-  label {
+  /* label {
     color: black;
     flex: 1;
     margin-right: 10px;
-    white-space: nowrap; /* Prevent label words from wrapping */
-  }
+    white-space: nowrap; /* Prevent label words from wrapping 
+  } */
 
  
 
 textarea {
   resize: vertical;
+  height: 80px;
 }
 
 .lineup-group {
