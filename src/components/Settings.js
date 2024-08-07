@@ -3,10 +3,10 @@ import './Setting.css';
 
 const Settings = () => {
   const [formData, setFormData] = useState({
-    firstName: 'Oamogetswe',
-    lastName: 'Makgopela',
+    firstName: 'Foward',
+    lastName: 'Nkuna',
     companyName: 'Capitec',
-    email: 'opmakgopela@gmail.com',
+    email: 'fowardnkuna6@gmail.com',
     currentPassword: '',
     newPassword: '',
     confirmPassword: ''
