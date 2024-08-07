@@ -154,7 +154,7 @@
     transform: translateX(280px); /* Width of the sidebar */
   }
   
-  .settings {
+  .settings-container {
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -164,7 +164,7 @@
   }
   
   .supportPage {
-    margin-left: 2px;
+    margin-left: 5px;
   }
   
   .section {
@@ -193,49 +193,18 @@
   
   .form-group input {
     flex: 1;
-    padding: 5px;
+    padding-right: 300px;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: #888; /* Adjusted background color */
     color: white;
     font-size: 16px;
-    padding-right:30px;
   }
   
-  .buttons {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 70px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #444;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    
-  }
   
   button:hover {
     background-color: #666;
   }
   
-  /* Footer styles */
-  .footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
   
-  .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
   

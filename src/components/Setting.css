@@ -1,11 +1,11 @@
 /* src/components/Settings.css */
-.settings {
+.settings-container {
     background-color: black;
     color: white;
     padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: auto;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    padding-right: 10000px;
   }
   
   .section {
@@ -30,21 +30,25 @@
     padding: 8px;
     margin-top: 5px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #666;
     color: white;
     font-size: 16px;
+    
   }
   
   .buttons {
     display: flex;
     justify-content: space-between;
+    padding-left: 70px;
+   
   }
   
   button {
+    
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: #444;
     color: white;
     cursor: pointer;
@@ -52,6 +56,6 @@
   }
   
   button:hover {
-    background-color: #666;
+    background-color: #a39f9f;
   }
   
