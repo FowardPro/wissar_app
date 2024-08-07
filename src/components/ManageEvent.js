@@ -5,6 +5,7 @@ const ManageEvent = () => {
     return (
         
         <div className="manage-event-body">
+           
         <div className="manage-events-container">
             <h2>Manage Your Events</h2>
             <div className="event-card">
