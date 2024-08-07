@@ -2,13 +2,12 @@
   background-color: white;
   height: 100vh;
   width: 100%;
-}
+
 
 .createEventPage {
 background-color: black;
 height: 100vh;
 width: 100%;
-}
 
 .form-container{
   background-color: black;
@@ -16,17 +15,58 @@ width: 100%;
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 600px; /* Increased by 500 pixels */
-  width: 100%;
+  max-width: 600px; /* Increased by 500 pixels */ 
   max-height: 1200px; /* Added a max-height */
   
 
+  .button-container {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button {
+    padding: 15px 50px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+   
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+
+}
+}
 }
 
 
-form {
+
+.createEventPage-container-form {
     display: flex;
     flex-direction: column;
+
+    textarea {
+      resize: vertical;
+      height: 80px;
+    }
+    
+    .lineup-group {
+      display: flex;
+      align-items: center;
+    }
+    
+    .lineup-input {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
   }
   .inputs-div {
     background-color: white;
@@ -36,6 +76,11 @@ form {
     max-width: 600px; /* Increased by 500 pixels */
     max-height: 1000px; /* Added a max-height */
 
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
 
     h2 {
       text-align: center;
@@ -71,11 +116,7 @@ form {
    
   }
   
-  .form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
+  
   
   /* label {
     color: black;
@@ -86,44 +127,9 @@ form {
 
  
 
-textarea {
-  resize: vertical;
-  height: 80px;
-}
 
-.lineup-group {
-  display: flex;
-  align-items: center;
-}
 
-.lineup-input {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
 
-.button-container {
-    background-color: black;
-    padding: 20px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  button {
-    padding: 15px 50px;
-    border: 1px solid white;
-    border-radius: 4px;
-    background-color: #333;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-   
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
 
   @media (max-width: 600px) {
     .form-container {

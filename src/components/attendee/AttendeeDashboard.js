@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import './OrganizerAccountDesktop.css';
-import LogoSVG from '../assets/photos/svg/header_logo.svg';
+// import './OrganizerAccountDesktop.css';
+// import LogoSVG from '../assets/photos/svg/header_logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faUser, faBell, faCheck, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import Settings from '../components/Settings';
-import Support from '../components/Support';
-import Footer from '../components/Footer';
-import ManageEvent from '../components/ManageEvent';
-import CreateEvent from '../components/CreateEvent';
+// import Settings from '../components/Settings';
+// import Support from '../components/Support';
+// import Footer from '../components/Footer';
+// import ManageEvent from '../components/ManageEvent';
+// import CreateEvent from '../components/CreateEvent';
 
-const OrganizerAccountDesktop = () => {
+const AttendeeDashboard = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-  const [showSupport, setShowSupport] = useState(false);
-  const [showManageEvent, setShowManageEvent] = useState(false);
-  const [showCreateEvent,setShowCreateEvent]= useState(false);
+  // const [showSettings, setShowSettings] = useState(false);
+  // const [showSupport, setShowSupport] = useState(false);
+  // const [showManageEvent, setShowManageEvent] = useState(false);
+  // const [showCreateEvent,setShowCreateEvent]= useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -137,4 +137,4 @@ const OrganizerAccountDesktop = () => {
   );
 };
 
-export default OrganizerAccountDesktop;
+export default AttendeeDashboard;
