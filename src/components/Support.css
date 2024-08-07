@@ -1,0 +1,45 @@
+.support-page {
+    padding: 20px;
+    text-align: left;
+    color: azure;
+    background-color: #000000;
+    
+  }
+  
+  .support-header {
+    text-align: left;
+    color: red;
+    margin-bottom: 20px;
+  }
+  
+  .support-content form {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .support-content label {
+    margin-top: 10px;
+   
+  }
+  
+  .support-content input, .support-content textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    text-align: center;
+  }
+  .support-container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: left;
+    color: #000000;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+ 
+  
+  
