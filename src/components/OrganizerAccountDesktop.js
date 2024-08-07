@@ -17,6 +17,7 @@ const OrganizerAccountDesktop = () => {
   const [showSupport, setShowSupport] = useState(false);
   const [showManageEvent, setShowManageEvent] = useState(false);
   const [showCreateEvent,setShowCreateEvent]= useState(false);
+  
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
