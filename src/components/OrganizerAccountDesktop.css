@@ -205,6 +205,23 @@
   button:hover {
     background-color: #666;
   }
-  
+  .heading {
+    font-family: monospace;
+    font-size: 40px; /* Adjust based on desired size */
+    font-weight: bold;
+    color: red;
+    position: relative;
+    margin-left: 20px; /* Space between line and text */
+}
+
+.heading::before {
+    content: '';
+    position: absolute;
+    left: -20px; /* Position of the vertical line */
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Thickness of the vertical line */
+    background-color: rgb(255, 1, 1);
+}
   
   

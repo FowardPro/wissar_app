@@ -4,6 +4,8 @@ import contactImage from '../assets/photos/Image.png';
 
 function Support() {
   return (
+    <div>
+    <div className="heading">Support</div>
     <div className="support-cotainer">
     <div className="supportPage flex">
       <div className="container flex">
@@ -41,6 +43,7 @@ function Support() {
           </p>
         </div>
       </div>
+    </div>
     </div>
     </div>
   );
