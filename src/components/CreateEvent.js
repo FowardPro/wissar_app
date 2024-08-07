@@ -2,7 +2,7 @@ import React from 'react'
 import './CreateEvent.css'
 import { FiPlusCircle } from "react-icons/fi";
   import {  Link } from 'react-router-dom';
-// import ManageEvent from '../components/ManageEvent';
+
 
 const CreateEvent = () => {
   return (
