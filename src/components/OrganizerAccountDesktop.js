@@ -8,7 +8,7 @@ import Settings from '../components/Settings';
 import Support from '../components/Support';
 import Footer from '../components/Footer';
 import ManageEvent from '../components/ManageEvent';
-import CreateEvent from '../components/CreateEvent';
+import CreateEvent from '../components/CreateEvent'; 
 
 const OrganizerAccountDesktop = () => {
   const [menuOpen, setMenuOpen] = useState(false);
