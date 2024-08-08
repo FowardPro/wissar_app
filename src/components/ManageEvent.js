@@ -1,7 +1,11 @@
 import React from 'react';
 import './ManageEvent.css';
+<<<<<<< HEAD
  import { Link } from 'react-router-dom';
  import SavedEventPage from './SavedEventPage';
+=======
+import {Link} from 'react-router-dom';
+>>>>>>> 343b4fab0b6267f572f8fe57d44e60a558ba9ce8
 
 const ManageEvent = () => {
     return (
@@ -49,10 +53,16 @@ const ManageEvent = () => {
                     </svg>
                 </div>
             </div>
+<<<<<<< HEAD
             <Link to={'/savedeventpage'}>
             <button className="saved-events-button">Saved Events</button>
             </Link>
             
+=======
+            <Link to="savedEventPage">
+            <button className="saved-events-button">Saved Events</button>
+            </Link>
+>>>>>>> 343b4fab0b6267f572f8fe57d44e60a558ba9ce8
         </div>
         
         </div>
