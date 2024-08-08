@@ -1,0 +1,55 @@
+.keys {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(51, 24, 24); /* Changed border color to white */
+    width: fit-content; /* Adjust width as needed */
+    margin-bottom: 50px;
+  }
+  
+  @font-face {
+    font-family: montserrat;
+    src: url(../assets/fonts/Montserrat-Thin.ttf);
+  }
+  
+  @font-face {
+    font-family: oswald;
+    src: url(../assets/fonts/Oswald-Light.ttf);
+  }
+  
+  .keys h3 {
+    margin: 0 0 10px 0;
+    color: white; /* Ensure the color is white */
+    font-family: oswald;
+    font-size: 1.5rem;
+  }
+  
+  .keys-1
+  {
+    font-family: montserrat;
+  }
+  
+  .keys ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .keys li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust margin between items */
+    color: white; /* Ensure the color is white */
+  }
+  
+  .keys .icon {
+    color: yellow; /* Color for check icon */
+    margin-right: 10px; /* Space between icon and text */
+  }
+  
+  .keys li:nth-child(2) .icon {
+    color: rgb(0, 195, 255); /* Color for rocket icon */
+  }
+  
+  

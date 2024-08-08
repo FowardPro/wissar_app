@@ -25,12 +25,12 @@ const SavedEventPage = () => {
   };
 
   return (
-    <div className="container">
+    <div className="saved-event-container">
       {showAll ? <h1>Manage Your Events</h1>:<h1>Saved Events</h1>} 
       <ul className="event-list">
         {events.map(event => (
             <li key={event.id} className="event-item">
-              <h2>{event.name}</h2>
+              <h1>{event.name}</h1>
               <p>{event.information}</p>
               <button onClick={() => handleDelete(event.id)} className="delete-button">
                 Delete
