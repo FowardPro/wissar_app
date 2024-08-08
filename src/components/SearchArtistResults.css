@@ -1,0 +1,99 @@
+.search-artist-results-container {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+.search-artist-body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.search-artist-search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 100%;
+}
+
+.search-artist-search-bar input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    margin-top: 50px;
+    margin-right: 100px;
+}
+
+.search-artist-title {
+    color: red;
+    font-weight: bold;
+    position: sticky;
+    background-color: white;
+    z-index: 1000;
+}
+
+.search-artist-suggested-title {
+    color: red;
+    font-weight: bold;
+    position: sticky;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+
+.search-artist-suggested-artists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: 1px solid white;
+    margin-bottom: 100px;
+}
+
+.artist-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+.artist-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.artist-card h3 {
+    font-size: 30px;
+    margin: 0;
+    font-family: 'Brush Script MT', cursive;
+    color: white;
+}
+
+.artist-card p {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}
+
+.search-artist-searchButton-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px; /* Optional, for spacing */
+}
