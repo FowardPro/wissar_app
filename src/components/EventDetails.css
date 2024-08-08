@@ -1,0 +1,60 @@
+@font-face {
+    font-family: montserrat;
+    src: url(../assets/fonts/Montserrat-Thin.ttf);
+  }
+
+  @font-face {
+    font-family: oswald;
+    src: url(../assets/fonts/Oswald-Light.ttf);
+  }
+.orgevent-details {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(19, 11, 11); /* Added border */
+    max-height: 300px; /* Set a maximum height for the scrollable area */
+    overflow-y: auto; /* Make the content scrollable */
+
+  }
+
+  p
+  {
+    font-family: montserrat , sans-serif;    
+    font-size: 1em; /* Adjust font size as needed */
+  }
+
+  .header99
+  {
+    font-family: oswald , sans-serif;    
+    font-size: 1.7em; /* Adjust font size as needed */
+    color: red;
+  }
+  
+  .event-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .event-actions button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .event-actions button:hover {
+    transition: 0.5s;
+    font-size: 0.9rem;
+    color: red;
+  }
+
+  .space
+  {
+    margin-right: 10px;
+  }
+
+
+  

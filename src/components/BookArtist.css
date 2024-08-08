@@ -1,0 +1,27 @@
+.book-artist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 20px;
+    color: white;
+  }
+  
+  .book-artist .ba {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .book-artist .ba .icon-plus {
+    font-size: 24px;
+  }
+  

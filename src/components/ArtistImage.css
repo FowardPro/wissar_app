@@ -1,0 +1,21 @@
+.artist-image-container {
+ 
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+    height: 430px; /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .artist-large-image, .artist-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .artist-video {
+    display: block;
+  }
+  

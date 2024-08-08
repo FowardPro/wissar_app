@@ -9,15 +9,17 @@ import Support from '../components/Support';
 import Footer from '../components/Footer';
 import ManageEvent from '../components/ManageEvent';
 import CreateEvent from '../components/CreateEvent';
+import OrganiserDashboard from '../components/OrganiserDashboard';
 
 const OrganizerAccountDesktop = () => {
+  const [showOrganiserDashboard,setShowOrganiserDashboard]= useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [showSupport, setShowSupport] = useState(false);
   const [showManageEvent, setShowManageEvent] = useState(false);
   const [showCreateEvent,setShowCreateEvent]= useState(false);
-
+  
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
     setShowSettings(false);
@@ -43,6 +45,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(false);
+    setShowOrganiserDashboard(false)
   };
 
   const handleSupportClick = () => {
@@ -51,6 +54,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(false);
+    setShowOrganiserDashboard(false)
   };
 
   const handleManageEventClick = () => {
@@ -59,6 +63,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(true);
     setShowCreateEvent(false);
+    setShowOrganiserDashboard(false)
   };
 
   const handleCreateEventClick = () => {
@@ -67,6 +72,15 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(true);
+    setShowOrganiserDashboard(false)
+  };
+  const handleOrganiserDashboard = () => {
+    setShowSupport(false);
+    setShowSettings(false);
+    setMenuOpen(true);
+    setShowManageEvent(false);
+    setShowCreateEvent(false);
+    setShowOrganiserDashboard(true)
   };
 
   useEffect(() => {
@@ -83,6 +97,7 @@ const OrganizerAccountDesktop = () => {
         <header className="organizer-header">
           <FontAwesomeIcon icon={faBars} className="burger-icon" onClick={toggleMenu} />
           <div className={`menu-dropdown ${menuOpen ? 'open' : ''}`}>
+          <Link to="/organiserDashboard" onClick={handleOrganiserDashboard} className="menu-item">HOME<FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/createEvent" onClick={handleCreateEventClick} className="menu-item">CREATE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/manageevent" onClick={handleManageEventClick} className="menu-item">MANAGE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/support" onClick={handleSupportClick} className="menu-item">SUPPORT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
@@ -106,6 +121,10 @@ const OrganizerAccountDesktop = () => {
 
         <div className={`content ${menuOpen ? 'slide-in' : ''}`}>
           {
+            showOrganiserDashboard? (
+              <OrganiserDashboard isScrolled={isScrolled} menuOpen={menuOpen} />
+            ) 
+            :
           showSettings ? (
             <Settings isScrolled={isScrolled} menuOpen={menuOpen} />
           ) 
@@ -119,17 +138,20 @@ const OrganizerAccountDesktop = () => {
             <CreateEvent isScrolled={isScrolled} menuOpen={menuOpen} />
           ) :
           (
+            
             <Routes>
+              <Route path="/organiserDashboard" element={<OrganiserDashboard isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/settings" element={<Settings isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/support" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/manageEvent" element={<ManageEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/createEvent" element={<CreateEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
+              
               {/* Add more routes as needed */}
             </Routes>
           )
           }
         </div>
-
+        {/*<OrganiserDashboard/>*/}
         <Footer />
       </div>
     </Router>
