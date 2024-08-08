@@ -9,7 +9,7 @@ import Support from '../components/Support';
 import Footer from '../components/Footer';
 import ManageEvent from '../components/ManageEvent';
 import CreateEvent from '../components/CreateEvent';
-
+import SavedEventPage from '../components/SavedEventPage';
 const OrganizerAccountDesktop = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,6 +17,7 @@ const OrganizerAccountDesktop = () => {
   const [showSupport, setShowSupport] = useState(false);
   const [showManageEvent, setShowManageEvent] = useState(false);
   const [showCreateEvent,setShowCreateEvent]= useState(false);
+  const [showSavedPageEvent,setShowSavedPageEvent]= useState(false);
   
 
   const toggleMenu = () => {
@@ -25,6 +26,7 @@ const OrganizerAccountDesktop = () => {
     setShowSupport(false);
     setShowManageEvent(false);
     setShowCreateEvent(false);
+    setShowSavedPageEvent(false);
   };
 
   const handleScroll = () => {
@@ -44,6 +46,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(false);
+    setShowSavedPageEvent(false);
   };
 
   const handleSupportClick = () => {
@@ -52,6 +55,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(false);
+    setShowSavedPageEvent(false);
   };
 
   const handleManageEventClick = () => {
@@ -60,6 +64,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(true);
     setShowCreateEvent(false);
+    setShowSavedPageEvent(false);
   };
 
   const handleCreateEventClick = () => {
@@ -68,8 +73,16 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(true);
+    setShowSavedPageEvent(false);
   };
-
+  const handleSavedEventPageClick = () => {
+    setShowSupport(false);
+    setShowSettings(false);
+    setMenuOpen(true);
+    setShowManageEvent(false);
+    setShowCreateEvent(false);
+    setShowSavedPageEvent(true);
+  };
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -88,6 +101,7 @@ const OrganizerAccountDesktop = () => {
             <Link to="/manageevent" onClick={handleManageEventClick} className="menu-item">MANAGE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/support" onClick={handleSupportClick} className="menu-item">SUPPORT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/settings" onClick={handleSettingsClick} className="menu-item">SETTINGS <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
+            <Link to="/SavedEventPage" onClick={handleSavedEventPageClick} className="menu-item">SAVED EVENT PAGE <FontAwesomeIcon icon={faChevronRight} className='arrow'/> </Link>
           </div>
           <div className="logo">
             <img src={LogoSVG} alt="Wissar Logo" className="logo-svg" />
@@ -119,12 +133,16 @@ const OrganizerAccountDesktop = () => {
           :showCreateEvent ? (
             <CreateEvent isScrolled={isScrolled} menuOpen={menuOpen} />
           ) :
+          showSavedPageEvent? (
+            <SavedEventPage isScrolled={isScrolled} menuOpen={menuOpen} />
+          ) :
           (
             <Routes>
               <Route path="/settings" element={<Settings isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/support" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/manageEvent" element={<ManageEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/createEvent" element={<CreateEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
+              <Route path="/SavedEventPage" element={<SavedEventPage isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               {/* Add more routes as needed */}
             </Routes>
           )

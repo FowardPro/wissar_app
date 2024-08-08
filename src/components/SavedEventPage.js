@@ -30,7 +30,7 @@ const SavedEventPage = () => {
       <ul className="event-list">
         {events.map(event => (
             <li key={event.id} className="event-item">
-              <h2>{event.name}</h2>
+              <h1>{event.name}</h1>
               <p>{event.information}</p>
               <button onClick={() => handleDelete(event.id)} className="delete-button">
                 Delete
