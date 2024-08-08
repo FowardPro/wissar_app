@@ -8,14 +8,9 @@ import Settings from '../components/Settings';
 import Support from '../components/Support';
 import Footer from '../components/Footer';
 import ManageEvent from '../components/ManageEvent';
-<<<<<<< HEAD
 import CreateEvent from '../components/CreateEvent';
 import SavedEventPage from '../components/SavedEventPage';
-=======
-import CreateEvent from '../components/CreateEvent'; 
-import SavedEventPage from '../components/SavedEventPage';
 
->>>>>>> 343b4fab0b6267f572f8fe57d44e60a558ba9ce8
 const OrganizerAccountDesktop = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -107,11 +102,7 @@ const OrganizerAccountDesktop = () => {
             <Link to="/manageevent" onClick={handleManageEventClick} className="menu-item">MANAGE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/support" onClick={handleSupportClick} className="menu-item">SUPPORT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/settings" onClick={handleSettingsClick} className="menu-item">SETTINGS <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
-<<<<<<< HEAD
             {/* <Link to="/savedeventpage" onClick={handleSavedEventPageClick} className="menu-item">SAVED EVENT PAGE <FontAwesomeIcon icon={faChevronRight} className='arrow'/> </Link> */}
-=======
-            
->>>>>>> 343b4fab0b6267f572f8fe57d44e60a558ba9ce8
           </div>
           <div className="logo">
             <img src={LogoSVG} alt="Wissar Logo" className="logo-svg" />
@@ -152,11 +143,7 @@ const OrganizerAccountDesktop = () => {
               <Route path="/support" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/manageEvent" element={<ManageEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/createEvent" element={<CreateEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
-<<<<<<< HEAD
               <Route path="/SavedEventPage" element={<SavedEventPage isScrolled={isScrolled} menuOpen={menuOpen}  />} />
-=======
-              <Route path="/savedEventPage" element={<SavedEventPage menuOpen={menuOpen} />} />
->>>>>>> 343b4fab0b6267f572f8fe57d44e60a558ba9ce8
               {/* Add more routes as needed */}
             </Routes>
           )
