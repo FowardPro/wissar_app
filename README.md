@@ -10,7 +10,7 @@
 
 ## Manage Events
 
-![Manage Events](readme_images/manageEventImage.png)
+![Manage Events](readme_images/manageEvent.png)
 
 ## Settings
 
