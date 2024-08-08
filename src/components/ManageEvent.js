@@ -4,6 +4,9 @@ import './ManageEvent.css';
 
 const ManageEvent = () => {
     return (
+        <div className="mange-event-main-container">
+           
+        <div className="heading">Manage Events</div>
         
         <div className="manage-event-body">
            
@@ -49,6 +52,8 @@ const ManageEvent = () => {
             <button className="saved-events-button">Saved Events</button>
             </Link>
             
+        </div>
+        
         </div>
         </div>
     );

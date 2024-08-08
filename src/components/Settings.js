@@ -23,6 +23,8 @@ const Settings = () => {
   };
 
   return (
+    <div>
+    <div className="heading">Settings</div>
     <div className="settings-container">
       <form onSubmit={handleSubmit}>
         <div className="section">
@@ -99,6 +101,7 @@ const Settings = () => {
           <button type="button">Logout</button>
         </div>
       </form>
+    </div>
     </div>
   );
 };

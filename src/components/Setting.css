@@ -3,7 +3,6 @@
     background-color: black;
     color: white;
     padding: 20px;
-    margin-left: 5px;
     margin-bottom: 5px;
     padding-right: 10000px;
   }
@@ -30,10 +29,11 @@
     padding: 5px;
     margin-top: 5px;
     border-radius: 10px;
-    background-color: #bdb9b9;
-    color: white;
+    background-color: #020202;
     font-size: 16px;
     padding-left: 15px;
+    margin-left: 100px;
+    background-color: aliceblue;
   }
   
   .buttons {
@@ -44,17 +44,17 @@
   }
   
   button {
-    
-    padding: 10px 20px;
+   padding: 10px 20px;
     border: none;
-    border-radius: 15px;
-    background-color: #444;
-    color: white;
+    border-radius: 5px;
+    background-color: #3b3b3b;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     font-size: 16px;
   }
   
   button:hover {
-    background-color: #a39f9f;
+    background-color: #a1a1a1;
   }
+
   
