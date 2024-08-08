@@ -1,9 +1,24 @@
 <<<<<<< HEAD
+
 # wissar_app
+
 =======
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My Project
+
+## Manage Events
+
+![Manage Events](readme_images/manageEvent.png)
+
+## Settings
+
+![Settings](readme_images/Settings.png)
+
+## Support
+
+![Support](readme_images/Support.png)
 
 <img align= "left" alt="Java" width="50px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
 <img align= "left" alt="Java" width="50px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
@@ -73,6 +88,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # wissarApp
+
 # wissarApp
->>>>>>> 95bb9294 (Push new vision)
+
+> > > > > > > 95bb9294 (Push new vision)

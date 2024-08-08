@@ -1,8 +1,10 @@
 
 .support-cotainer{
-    background: black;
-    padding: 0;
-    margin: 0;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  margin-bottom: 5px;
+  padding-right: 10000px;
   }
   
   .flex {
