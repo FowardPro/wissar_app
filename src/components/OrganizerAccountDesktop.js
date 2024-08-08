@@ -10,15 +10,21 @@ import Footer from '../components/Footer';
 import ManageEvent from '../components/ManageEvent';
 import CreateEvent from '../components/CreateEvent';
 import EventDetails from '../components/EventDetails';
+import OrganiserDashboard from '../components/OrganiserDashboard';
 
+import SavedEventPage from '../components/SavedEventPage';
 const OrganizerAccountDesktop = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [showOrganiserDashboard,setShowOrganiserDashboard]= useState(true);
+  const [menuOpen, setMenuOpen] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [showSupport, setShowSupport] = useState(false);
   const [showManageEvent, setShowManageEvent] = useState(false);
   const [showCreateEvent,setShowCreateEvent]= useState(false);
   const [showEventDetails,setShowEventDetails]= useState(false);
+  
+  const [showSavedPageEvent,setShowSavedPageEvent]= useState(false);
+  
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -27,6 +33,8 @@ const OrganizerAccountDesktop = () => {
     setShowManageEvent(false);
     setShowCreateEvent(false);
     setShowEventDetails(false)
+    setShowSavedPageEvent(false);
+    setShowOrganiserDashboard(false);
   };
 
   const handleScroll = () => {
@@ -47,6 +55,8 @@ const OrganizerAccountDesktop = () => {
     setShowManageEvent(false);
     setShowCreateEvent(false);
     setShowEventDetails(false)
+    setShowOrganiserDashboard(false)
+    setShowSavedPageEvent(false);
   };
 
   const handleSupportClick = () => {
@@ -56,6 +66,8 @@ const OrganizerAccountDesktop = () => {
     setShowManageEvent(false);
     setShowCreateEvent(false);
     setShowEventDetails(false)
+    setShowOrganiserDashboard(false)
+    setShowSavedPageEvent(false);
   };
 
   const handleManageEventClick = () => {
@@ -65,6 +77,8 @@ const OrganizerAccountDesktop = () => {
     setShowManageEvent(true);
     setShowCreateEvent(false);
     setShowEventDetails(false)
+    setShowOrganiserDashboard(false)
+    setShowSavedPageEvent(false);
   };
 
   const handleCreateEventClick = () => {
@@ -77,6 +91,27 @@ const OrganizerAccountDesktop = () => {
   };
  
 
+    setShowOrganiserDashboard(false)
+  };
+  const handleOrganiserDashboard = () => {
+    setShowSavedPageEvent(false);
+    setShowSupport(false);
+    setShowSettings(false);
+    setMenuOpen(true);
+    setShowManageEvent(false);
+    setShowCreateEvent(false);
+    setShowOrganiserDashboard(true)
+  };
+  const handleSavedEventPageClick = () => {
+    setShowSupport(false);
+    setShowSettings(false);
+    setMenuOpen(true);
+    setShowManageEvent(false);
+    setShowCreateEvent(false);
+    setShowOrganiserDashboard(false)
+    setShowSavedPageEvent(true);
+  };
+  
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -91,11 +126,13 @@ const OrganizerAccountDesktop = () => {
         <header className="organizer-header">
           <FontAwesomeIcon icon={faBars} className="burger-icon" onClick={toggleMenu} />
           <div className={`menu-dropdown ${menuOpen ? 'open' : ''}`}>
+          <Link to="/organiserDashboard" onClick={handleOrganiserDashboard} className="menu-item">HOME<FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/createEvent" onClick={handleCreateEventClick} className="menu-item">CREATE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/manageevent" onClick={handleManageEventClick} className="menu-item">MANAGE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/support" onClick={handleSupportClick} className="menu-item">SUPPORT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/settings" onClick={handleSettingsClick} className="menu-item">SETTINGS <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             {/* <Link to="/eventedetails" onClick={handleEventDetailsClick} className="menu-item">Event Details <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link> */}
+            {/* <Link to="/savedeventpage" onClick={handleSavedEventPageClick} className="menu-item">SAVED EVENT PAGE <FontAwesomeIcon icon={faChevronRight} className='arrow'/> </Link> */}
           </div>
           <div className="logo">
             <img src={LogoSVG} alt="Wissar Logo" className="logo-svg" />
@@ -115,6 +152,10 @@ const OrganizerAccountDesktop = () => {
 
         <div className={`content ${menuOpen ? 'slide-in' : ''}`}>
           {
+            showOrganiserDashboard? (
+              <OrganiserDashboard isScrolled={isScrolled} menuOpen={menuOpen} />
+            ) 
+            :
           showSettings ? (
             <Settings isScrolled={isScrolled} menuOpen={menuOpen} />
           ) 
@@ -131,20 +172,27 @@ const OrganizerAccountDesktop = () => {
             <EventDetails isScrolled={isScrolled} menuOpen={menuOpen} />
           ) 
           :
+          ) 
+          :showSavedPageEvent? (
+            <SavedEventPage isScrolled={isScrolled} menuOpen={menuOpen} />
+          ) :
           (
+            
             <Routes>
+              <Route path="/organiserDashboard" element={<OrganiserDashboard isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/settings" element={<Settings isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/support" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/manageEvent" element={<ManageEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/createEvent" element={<CreateEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/eventedetails" element={<EventDetails menuOpen={menuOpen} />} />
               
+              <Route path="/SavedEventPage" element={<SavedEventPage isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               {/* Add more routes as needed */}
             </Routes>
           )
           }
         </div>
-
+        {/*<OrganiserDashboard/>*/}
         <Footer />
       </div>
     </Router>

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { USE} from 'react';
 import './ManageEvent.css';
 import {Link} from 'react-router-dom';
+import SavedEventPage from './SavedEventPage';
 
 const ManageEvent = () => {
     return (
@@ -54,9 +55,10 @@ const ManageEvent = () => {
                     </Link>
                 </div>
             </div>
-            <Link to="savedEventPage">
+          <Link to={'/savedeventpage'}>
             <button className="saved-events-button">Saved Events</button>
             </Link>
+            
         </div>
         
         </div>

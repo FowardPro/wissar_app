@@ -1,43 +1,58 @@
 /* Styles specific to InnerBody component */
-.heading-top {
+.heading{
     position: relative;
     left: 0;
     color: red;
     width: calc(100% - 40px);
     transition: margin-left 0.3s ease;
     padding-left: 10px;
-}
-
-.heading-top.stuck {
-    position: fixed;
-    top: 100px;
-    left: 15px;
-    height: 60px;
-    z-index: 1090;
-    padding: 10px 0;
-    background-color: #f0f0f0;
+    
 }
 
 .panel1 {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     margin-bottom: 4px;
-    height: 600px;
+    height: 650px;
+    color: white;
+    padding: 2px;
+    transition: margin-top 0.3s ease;
+   background-color: black;
     color: white;
     padding: 20px;
-    transition: margin-top 0.3s ease;
+    margin-bottom: 5px;
+    width:100%;
 }
 
 .content-area {
     transition: transform 0.3s ease, margin-left 0.3s ease;
-    padding-top: 100px;
-    margin-left: 15px;
+    padding-top: 0px;
+    margin-left: 0px;
 }
 
-.menu-is-open {
-    transform: translateX(250px);
-}
 
 .main-page {
     overflow-y: auto;
     height: calc(100vh - 100px);
+    margin-top: 2px;
 }
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  
+  .main-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }

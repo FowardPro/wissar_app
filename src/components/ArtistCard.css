@@ -1,0 +1,57 @@
+.artist-card {
+    display: flex;
+    align-items: center;
+    background-color: #000; /* Black background */
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+   
+  }
+  
+  .artist-image img {
+    border-radius: 50%; /* Circular image */
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    object-fit: cover;
+    margin-right: 15px; /* Space between image and text */
+  }
+
+  .artist-image img:hover
+  {
+    background-color: black;
+    opacity: 70%;
+    transition: 0.5s;
+  }
+  
+  .artist-info {
+    color: #fff; /* White text */
+  }
+
+  @font-face {
+    font-family: montserrat;
+    src: url(../assets/fonts/Montserrat-Thin.ttf);
+  }
+  
+  .artist-name {
+    font-family: montserrat , sans-serif;    
+    
+  }
+
+  .artist-name-size
+  {
+    font-size: 2.2em; /* Adjust font size as needed */
+  }
+
+
+  .move-rocket-right
+  {
+    margin-left: 240px;
+  }
+
+ .icon {
+    color: rgb(0, 195, 255); /* Color for rocket icon */
+    font-family: 10px;
+  }
+
+
+  
