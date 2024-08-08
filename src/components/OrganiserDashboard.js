@@ -50,7 +50,7 @@ const OrganiserDashboard = ({ isScrolled, menuOpen }) => {
               },
         }
     ];
-    return (
+    return(
         <div className={`content-area ${menuOpen ? 'menu-is-open' : ''}`}>
             <main>
                 <div className='heading'>Book An Artist</div>
