@@ -14,7 +14,7 @@
   
   .supportPage {
     margin: 2px;
-    
+    margin: auto;
   
     h2 {
       color: red;
@@ -35,6 +35,9 @@
       justify-content: space-between;
       border-radius: 10px;
       color: black;
+      margin: auto;
+      align-items: center;
+      padding-left: 420px;
   
       .imageDiv {
         position: relative;
