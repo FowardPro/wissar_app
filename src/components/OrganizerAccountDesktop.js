@@ -9,10 +9,6 @@ import Support from '../components/Support';
 import Footer from '../components/Footer';
 import ManageEvent from '../components/ManageEvent';
 import CreateEvent from '../components/CreateEvent';
-import EventDetails from './EventDetails';
-
-
-
 
 const OrganizerAccountDesktop = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -91,6 +87,7 @@ const OrganizerAccountDesktop = () => {
             <Link to="/manageevent" onClick={handleManageEventClick} className="menu-item">MANAGE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/support" onClick={handleSupportClick} className="menu-item">SUPPORT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/settings" onClick={handleSettingsClick} className="menu-item">SETTINGS <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
+            
           </div>
           <div className="logo">
             <img src={LogoSVG} alt="Wissar Logo" className="logo-svg" />
@@ -128,7 +125,6 @@ const OrganizerAccountDesktop = () => {
               <Route path="/support" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/manageEvent" element={<ManageEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/createEvent" element={<CreateEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
-              <Route path="/eventdetails" element={<EventDetails menuOpen={menuOpen} />} />
               {/* Add more routes as needed */}
             </Routes>
           )
