@@ -25,7 +25,7 @@ const SavedEventPage = () => {
   };
 
   return (
-    <div className="container">
+    <div className="saved-event-container">
       {showAll ? <h1>Manage Your Events</h1>:<h1>Saved Events</h1>} 
       <ul className="event-list">
         {events.map(event => (

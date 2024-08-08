@@ -10,7 +10,6 @@ import Footer from '../components/Footer';
 import ManageEvent from '../components/ManageEvent';
 import CreateEvent from '../components/CreateEvent';
 import SavedEventPage from '../components/SavedEventPage';
-
 const OrganizerAccountDesktop = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
