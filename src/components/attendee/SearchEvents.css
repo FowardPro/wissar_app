@@ -24,6 +24,7 @@
 
   .searchEvents-div input {
     background-color: black;
+    color: white;
     flex: 1;
     margin-left: 10px;
     margin-right: 10px;
@@ -34,6 +35,42 @@
     width: 100%;
   }
 
+  .searchevent-cards{
+    width: 100%;
+    color: white;
+    
+  }
+  .event-cards{
+    background-color: white;
+    color:#555;
+    font-weight: bold;
+    border: 1px solid white;
+    width: 350px;
+    height: 220px;
+   
+    align-items: center;
+    padding: 10px;
+   border-radius: 10px;
+
+   .image-paragraps{
+    display: flex;
+   }
+    .search-paragraps{
+        border: 1px solid black;
+        margin-left: 10px; 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+  }
+
+  .event-cards img{
+    width: 90px;
+    height: 90px;
+    border-radius: 200px;
+  }
+  
   .searchButton-div {
     margin-top: 20px;
     display: flex;
