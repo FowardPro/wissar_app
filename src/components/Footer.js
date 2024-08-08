@@ -27,7 +27,7 @@ const Footer = () => {
 
   return (
     <footer className={`footer ${isSticky ? 'sticky' : ''}`}>
-      <div className="container">
+      <div className="footer-container">
         <p>&copy; 2024 Wissar. All rights reserved.</p>
         <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
       </div>
