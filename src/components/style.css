@@ -116,7 +116,7 @@
 /* Input Style */
 .block input[type="text"], .block input[type="email"], .block input[type="password"] {
     padding: 0.5rem; /* Padding inside the input */
-    border: 1px solid #ccc; /* Border around the input */
+    border: 1px solid #bebbbb; /* Border around the input */
     border-radius: 4px; /* Rounded corners for the input */
     font-size: 1rem; /* Font size inside the input */
     width: 100%; /* Full width of the input */

@@ -68,7 +68,7 @@
   
   .menu-item:hover,
   .menu-item:hover .arrow {
-    background-color: #b3b3b3;
+    background-color: #f5bbbb;
     transition: 0.5s ease-in-out;
   }
   
@@ -153,20 +153,6 @@
   .content.slide-in {
     transform: translateX(280px); /* Width of the sidebar */
   }
-  
-  .settings-container {
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    width: calc(100% - 290px); /* Adjust width based on sidebar and margin */
-    margin-left: 2px; /* 10px space between sidebar and content */
-  }
-  
-  .supportPage {
-    margin-left: 5px;
-  }
-  
   .section {
     margin-bottom: 20px;
   }
@@ -187,26 +173,12 @@
   .form-group label {
     flex: 0 0 150px; /* Adjust the label width as needed */
     margin-right: 10px;
-    font-size: 18px;color: white;
+    font-size: 18px;color: rgb(255, 255, 255);
     padding-left: 70px;
   }
   
-  .form-group input {
-    flex: 1;
-    padding-right: 300px;
-    border: none;
-    border-radius: 15px;
-    background-color: #888; /* Adjusted background color */
-    color: white;
-    font-size: 16px;
-  }
-  
-  
-  button:hover {
-    background-color: #666;
-  }
   .heading {
-    font-family: monospace;
+    font-family: Bernard MT Condensed;
     font-size: 40px; /* Adjust based on desired size */
     font-weight: bold;
     color: red;
@@ -220,7 +192,7 @@
     left: -20px; /* Position of the vertical line */
     top: 0;
     bottom: 0;
-    width: 2px; /* Thickness of the vertical line */
+    width: 5px; /* Thickness of the vertical line */
     background-color: rgb(255, 1, 1);
 }
   

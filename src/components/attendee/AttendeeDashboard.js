@@ -1,29 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import './OrganizerAccountDesktop.css';
-import LogoSVG from '../assets/photos/svg/header_logo.svg';
+import '../OrganizerAccountDesktop.css';
+import LogoSVG from '../../assets/photos/svg/header_logo.svg'
+// import LogoSVG from '../assets/photos/svg/header_logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faUser, faBell, faCheck, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import Settings from '../components/Settings';
-import Support from '../components/Support';
-import Footer from '../components/Footer';
-import ManageEvent from '../components/ManageEvent';
-import CreateEvent from '../components/CreateEvent';
+ import Settings from '../../components/Settings';
+ import Support from '../../components/Support';
+import Footer from  '../../components/Footer';
+ import ManageEvent from '../../components/ManageEvent';
+  import CreateEvent from '../../components/CreateEvent';
+ import SearchEvent from '../../components/attendee/SearchEvents'
 
-const OrganizerAccountDesktop = () => {
+const AttendeeDashboard = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [showSupport, setShowSupport] = useState(false);
   const [showManageEvent, setShowManageEvent] = useState(false);
-  const [showCreateEvent,setShowCreateEvent]= useState(false);
+  const [showSearchEvent,setShowSearchEvent]= useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
     setShowSettings(false);
     setShowSupport(false);
     setShowManageEvent(false);
-    setShowCreateEvent(false);
+    setShowSearchEvent(false);
   };
 
   const handleScroll = () => {
@@ -42,7 +44,7 @@ const OrganizerAccountDesktop = () => {
     setShowSupport(false);
     setMenuOpen(true);
     setShowManageEvent(false);
-    setShowCreateEvent(false);
+    setShowSearchEvent(false);
   };
 
   const handleSupportClick = () => {
@@ -50,7 +52,7 @@ const OrganizerAccountDesktop = () => {
     setShowSettings(false);
     setMenuOpen(true);
     setShowManageEvent(false);
-    setShowCreateEvent(false);
+    setShowSearchEvent(false);
   };
 
   const handleManageEventClick = () => {
@@ -58,15 +60,15 @@ const OrganizerAccountDesktop = () => {
     setShowSettings(false);
     setMenuOpen(true);
     setShowManageEvent(true);
-    setShowCreateEvent(false);
+    setShowSearchEvent(false);
   };
 
-  const handleCreateEventClick = () => {
+  const handleSearchEventClick = () => {
     setShowSupport(false);
     setShowSettings(false);
     setMenuOpen(true);
     setShowManageEvent(false);
-    setShowCreateEvent(true);
+    setShowSearchEvent(true);
   };
 
   useEffect(() => {
@@ -83,8 +85,8 @@ const OrganizerAccountDesktop = () => {
         <header className="organizer-header">
           <FontAwesomeIcon icon={faBars} className="burger-icon" onClick={toggleMenu} />
           <div className={`menu-dropdown ${menuOpen ? 'open' : ''}`}>
-            <Link to="/createEvent" onClick={handleCreateEventClick} className="menu-item">CREATE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
-            <Link to="/manageevent" onClick={handleManageEventClick} className="menu-item">MANAGE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
+            <Link to="/searchevents" onClick={handleSearchEventClick} className="menu-item">SEARCH EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
+            <Link to="/manageevent" onClick={handleManageEventClick} className="menu-item">SEARCH ARTIST <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/support" onClick={handleSupportClick} className="menu-item">SUPPORT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/settings" onClick={handleSettingsClick} className="menu-item">SETTINGS <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
           </div>
@@ -115,15 +117,15 @@ const OrganizerAccountDesktop = () => {
           : showManageEvent ? (
             <ManageEvent isScrolled={isScrolled} menuOpen={menuOpen} />
           ) 
-          :showCreateEvent ? (
-            <CreateEvent isScrolled={isScrolled} menuOpen={menuOpen} />
+          :showSearchEvent ? (
+            <SearchEvent isScrolled={isScrolled} menuOpen={menuOpen} />
           ) :
           (
             <Routes>
               <Route path="/settings" element={<Settings isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/support" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/manageEvent" element={<ManageEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
-              <Route path="/createEvent" element={<CreateEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
+              <Route path="/searchevents" element={<SearchEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               {/* Add more routes as needed */}
             </Routes>
           )
@@ -137,4 +139,4 @@ const OrganizerAccountDesktop = () => {
   );
 };
 
-export default OrganizerAccountDesktop;
+export default AttendeeDashboard;

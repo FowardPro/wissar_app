@@ -14,30 +14,43 @@ width: 100%;
   background-color: black;
   margin: auto;
   padding: 40px;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 600px; /* Increased by 500 pixels */
-  width: 100%;
+  max-width: 1000px; /* Increased by 500 pixels */ 
   max-height: 1200px; /* Added a max-height */
   
 
 }
 
-
-form {
+.createEventPage-container-form {
     display: flex;
     flex-direction: column;
+
+    
+    
+    .lineup-group {
+      display: flex;
+      align-items: center;
+    }
+    
+    .lineup-input {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
   }
+
   .inputs-div {
     background-color: white;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 40px;
     margin-bottom: 20px;
-    max-width: 600px; /* Increased by 500 pixels */
+    max-width: 1000px; /* Increased by 500 pixels */
     max-height: 1000px; /* Added a max-height */
 
+    
 
-    h2 {
+    h2{
       text-align: center;
       margin-bottom: 25px;
       font-weight: bold;
@@ -47,17 +60,24 @@ form {
     label{
         color: #555;
         flex: 1;
-        margin-right: 10px;
+        margin-right:-100px;
         white-space: nowrap;
     }
-
-    input,
     textarea {
+      resize: vertical;
+      height: 80px;
+      margin-left: 95px;
+    }
+    
+    input,textarea
+    {
       flex: 2;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 10px;
+      background-color: #fcf9f9;
       background-color: #bdb9b9;
+      
     }
 
       .plus-icon{
@@ -68,14 +88,16 @@ form {
         height: 24px;
         cursor: pointer;
     }  
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
    
   }
   
-  .form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
+ 
   
   /* label {
     color: black;
@@ -86,44 +108,31 @@ form {
 
  
 
-textarea {
-  resize: vertical;
-  height: 80px;
-}
-
-.lineup-group {
-  display: flex;
-  align-items: center;
-}
-
-.lineup-input {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
 .button-container {
     background-color: black;
     padding: 20px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
-  }
-  
-  button {
-    padding: 15px 50px;
-    border: 1px solid white;
-    border-radius: 4px;
-    background-color: #333;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+ 
+    button {
+      padding: 20px 70px;
+      border: 1px solid white;
+      border-radius: 4px;
+      background-color: #4e4e4e;
+      color: rgb(129, 129, 129);
+      font-size: 16px;
+      cursor: pointer;
+     
+    }
    
-  }
-  
   button:hover {
     background-color: #555;
   }
+  }
+ 
+     
+  
 
   @media (max-width: 600px) {
     .form-container {
