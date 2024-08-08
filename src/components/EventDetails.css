@@ -1,19 +1,21 @@
-/* CreateEvent.css */
+/* CSS for EventDetails */
 .EventDetails {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* Align to the top */
     background-color: #000; /* Background color of the container */
+    padding: 20px; /* Add padding for better spacing */
+    position: relative; /* Ensure it stacks properly */
 }
 
 .EventDetails form {
-   background-color: #fff;
+    background-color: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px; /* Increased max width for more space */
     width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
 .EventDetails h2 {
@@ -24,25 +26,27 @@
 .EventDetails .form-group {
     display: flex;
     align-items: center; /* Vertically center items */
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Margin between form groups */
 }
 
 .EventDetails .form-group label {
-    width: 30%; /* Set the width of the label */
-    margin-right: 10px;
+    width: 30%; /* Set width of the label */
     font-weight: bold;
-    text-align: right; /* Align text to the right within the label */
-    min-width: 150px; /* Ensure a minimum width for consistency */
+    text-align: left; /* Align text to the left within the label */
+    min-width: 120px; /* Minimum width for consistency */
+    color: #000; /* Set label color to black */
 }
 
 .EventDetails .form-group input, 
-.form-group textarea {
-    width: calc(70% - 10px); /* Adjust width for alignment with labels */
+.EventDetails .form-group textarea {
+    width: 70%; /* Adjust width to fit within the form */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     background-color: #dddcdc;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    margin-left: 10px; /* Space between label and input field */
 }
 
 .EventDetails .textarea {
@@ -50,25 +54,28 @@
 }
 
 .EventDetails .lineup-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Margin between lineup group and other elements */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically in the center */
 }
 
 .EventDetails .lineup-group label {
-    width: 30%; /* Align with other labels */
-    margin-right: 10px;
+    width: 30%; /* Set width of the label */
     font-weight: bold;
-    text-align: right;
-    min-width: 150px; /* Ensure consistency */
+    margin-right: 10px; /* Space between label and textarea */
+    min-width: 120px; /* Minimum width for consistency */
+    margin-left: 70px; /* Move the label further to the right */
 }
 
 .EventDetails .lineup-group .lineup-textarea {
-    width: calc(70% - 10px); /* Align with other input fields */
+    width: 300px; /* Fixed width for lineup text area */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     background-color: #dddcdc;
     resize: vertical; /* Allow vertical resizing */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
 .EventDetails .add-lineup-button {
@@ -76,12 +83,12 @@
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 8px 15px; /* Reduced padding */
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    margin-left: auto; /* Move button to the right */
-    display: block; /* Ensure button takes up full width available in its container */
+    font-size: 14px; /* Smaller font size */
+    width: auto; /* Adjust width to fit content */
+    align-self: flex-end; /* Align button to the right */
+    margin-top: 10px; /* Space between textarea and button */
 }
 
 .EventDetails .add-lineup-button:hover {
@@ -112,4 +119,42 @@
 
 .EventDetails .button[type="submit"]:hover {
     background-color: #0e0707;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .EventDetails {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .EventDetails form {
+        padding: 20px; /* Adjust padding inside form */
+    }
+
+    .EventDetails .form-group,
+    .EventDetails .lineup-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .EventDetails .form-group label,
+    .EventDetails .lineup-group label {
+        margin-bottom: 5px;
+        margin-right: 0;
+        width: 100%; /* Full width for labels on small screens */
+    }
+
+    .EventDetails .form-group input, 
+    .EventDetails .form-group textarea,
+    .EventDetails .lineup-group .lineup-textarea {
+        width: 100%; /* Full width for inputs and textareas on small screens */
+    }
+
+    .EventDetails .add-lineup-button {
+        width: 100%; /* Full width for button on small screens */
+    }
+
+    .EventDetails .button[type="submit"] {
+        width: 100%; /* Full width for submit button on small screens */
+    }
 }

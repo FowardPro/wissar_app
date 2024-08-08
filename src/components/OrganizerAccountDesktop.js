@@ -9,6 +9,7 @@ import Support from '../components/Support';
 import Footer from '../components/Footer';
 import ManageEvent from '../components/ManageEvent';
 import CreateEvent from '../components/CreateEvent';
+import EventDetails from '../components/EventDetails';
 
 const OrganizerAccountDesktop = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,6 +18,7 @@ const OrganizerAccountDesktop = () => {
   const [showSupport, setShowSupport] = useState(false);
   const [showManageEvent, setShowManageEvent] = useState(false);
   const [showCreateEvent,setShowCreateEvent]= useState(false);
+  const [showEventDetails,setShowEventDetails]= useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -24,6 +26,7 @@ const OrganizerAccountDesktop = () => {
     setShowSupport(false);
     setShowManageEvent(false);
     setShowCreateEvent(false);
+    setShowEventDetails(false)
   };
 
   const handleScroll = () => {
@@ -43,6 +46,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(false);
+    setShowEventDetails(false)
   };
 
   const handleSupportClick = () => {
@@ -51,6 +55,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(false);
+    setShowEventDetails(false)
   };
 
   const handleManageEventClick = () => {
@@ -59,6 +64,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(true);
     setShowCreateEvent(false);
+    setShowEventDetails(false)
   };
 
   const handleCreateEventClick = () => {
@@ -67,7 +73,9 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(true);
+    setShowEventDetails(false)
   };
+ 
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -87,7 +95,7 @@ const OrganizerAccountDesktop = () => {
             <Link to="/manageevent" onClick={handleManageEventClick} className="menu-item">MANAGE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/support" onClick={handleSupportClick} className="menu-item">SUPPORT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/settings" onClick={handleSettingsClick} className="menu-item">SETTINGS <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
-            
+            {/* <Link to="/eventedetails" onClick={handleEventDetailsClick} className="menu-item">Event Details <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link> */}
           </div>
           <div className="logo">
             <img src={LogoSVG} alt="Wissar Logo" className="logo-svg" />
@@ -118,13 +126,19 @@ const OrganizerAccountDesktop = () => {
           ) 
           :showCreateEvent ? (
             <CreateEvent isScrolled={isScrolled} menuOpen={menuOpen} />
-          ) :
+          ) 
+          :showEventDetails ? (
+            <EventDetails isScrolled={isScrolled} menuOpen={menuOpen} />
+          ) 
+          :
           (
             <Routes>
               <Route path="/settings" element={<Settings isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/support" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/manageEvent" element={<ManageEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/createEvent" element={<CreateEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
+              <Route path="/eventedetails" element={<EventDetails menuOpen={menuOpen} />} />
+              
               {/* Add more routes as needed */}
             </Routes>
           )
