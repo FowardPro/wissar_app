@@ -9,6 +9,7 @@ import Support from '../components/Support';
 import Footer from '../components/Footer';
 import ManageEvent from '../components/ManageEvent';
 import CreateEvent from '../components/CreateEvent';
+import DetailsEvent from '../components/DetailsEvent';
 import OrganiserDashboard from '../components/OrganiserDashboard';
 import SearchArtistResults from './SearchArtistResults';
 import SavedEventPage from '../components/SavedEventPage';
@@ -20,6 +21,7 @@ const OrganizerAccountDesktop = () => {
   const [showSupport, setShowSupport] = useState(false);
   const [showManageEvent, setShowManageEvent] = useState(false);
   const [showCreateEvent,setShowCreateEvent]= useState(false);
+  const [showDetailsEvent,setShowDetailsEvent]= useState(false);
   const [showSearchArtistResults,setShowSearchArtistResults]= useState(false);
   const [showSavedPageEvent,setShowSavedPageEvent]= useState(false);
   
@@ -30,6 +32,7 @@ const OrganizerAccountDesktop = () => {
     setShowSupport(false);
     setShowManageEvent(false);
     setShowCreateEvent(false);
+    setShowDetailsEvent(false)
     setShowSavedPageEvent(false);
     setShowOrganiserDashboard(false);
   };
@@ -51,6 +54,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(false);
+    setShowDetailsEvent(false)
     setShowOrganiserDashboard(false)
     setShowSavedPageEvent(false);
     setShowSearchArtistResults(false)
@@ -62,6 +66,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(false);
+    setShowDetailsEvent(false)
     setShowOrganiserDashboard(false)
     setShowSavedPageEvent(false);
     setShowSearchArtistResults(false)
@@ -73,6 +78,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(true);
     setShowCreateEvent(false);
+    setShowDetailsEvent(false)
     setShowOrganiserDashboard(false)
     setShowSavedPageEvent(false);
     setShowSearchArtistResults(false)
@@ -84,6 +90,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(true);
+    setShowDetailsEvent(false)
     setShowOrganiserDashboard(false)
     setShowSearchArtistResults(false)
   };
@@ -127,6 +134,7 @@ const OrganizerAccountDesktop = () => {
             <Link to="/manageevent" onClick={handleManageEventClick} className="menu-item">MANAGE EVENT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/support" onClick={handleSupportClick} className="menu-item">SUPPORT <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
             <Link to="/settings" onClick={handleSettingsClick} className="menu-item">SETTINGS <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link>
+            {/* <Link to="/eventedetails" onClick={handleEventDetailsClick} className="menu-item">Event Details <FontAwesomeIcon icon={faChevronRight} className='arrow'/></Link> */}
             {/* <Link to="/savedeventpage" onClick={handleSavedEventPageClick} className="menu-item">SAVED EVENT PAGE <FontAwesomeIcon icon={faChevronRight} className='arrow'/> </Link> */}
           </div>
           <div className="logo">
@@ -162,8 +170,11 @@ const OrganizerAccountDesktop = () => {
           ) 
           :showCreateEvent ? (
             <CreateEvent isScrolled={isScrolled} menuOpen={menuOpen} />
-          ) :
-          showSavedPageEvent? (
+          ) 
+          :showDetailsEvent ? (
+            <DetailsEvent isScrolled={isScrolled} menuOpen={menuOpen} />
+          ) 
+          :showSavedPageEvent? (
             <SavedEventPage isScrolled={isScrolled} menuOpen={menuOpen} />
           ) 
           :showSearchArtistResults ? (
@@ -178,6 +189,8 @@ const OrganizerAccountDesktop = () => {
               <Route path="/support" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/manageEvent" element={<ManageEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/createEvent" element={<CreateEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
+              <Route path="/eventedetails" element={<DetailsEvent menuOpen={menuOpen} />} />
+              
               <Route path="/SavedEventPage" element={<SavedEventPage isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/searchartistresults" element={<SearchArtistResults isScrolled={isScrolled} menuOpen={menuOpen} />} />
               {/* Add more routes as needed */}
