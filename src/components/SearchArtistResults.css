@@ -86,14 +86,12 @@
     color: white;
 }
 
-.search-artist-searchButton-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.search-button {
     background-color: black;
     color: white;
     border: 2px solid white;
     padding: 10px 20px;
     font-size: 16px;
-    margin-top: 20px; /* Optional, for spacing */
+    cursor: pointer;
+    border-radius: 5px;
 }

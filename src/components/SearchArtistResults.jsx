@@ -31,7 +31,7 @@ const SearchArtistResults = () => {
                 </div>
 
                 <div className="search-artist-searchButton-div">
-                    <button>SEARCH</button>
+                    <button className="search-button">SEARCH</button>
                  </div>
             </div>
 
@@ -39,20 +39,3 @@ const SearchArtistResults = () => {
     );
 }
 export default SearchArtistResults;
-
-/***<div className="search-bar">
-    <input type="text" placeholder="Search the artist of your choice" />
-    <button><i className="fa fa-search"></i></button>
-</div>
-<h2 className="suggested-title">Suggested Artists</h2>
-<div className="suggested-artists">
-   {Array.from({ length: 9 }).map((_, index) => (
-       <div key={index} className="artist-card">
-           <img src={sjava} alt="Artist" />
-           <div>
-               <h3>Sjava</h3>
-               <p>Artist</p>
-           </div>
-       </div>
-   ))}
-</div>*/
