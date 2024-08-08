@@ -9,7 +9,7 @@ import Support from '../components/Support';
 import Footer from '../components/Footer';
 import ManageEvent from '../components/ManageEvent';
 import CreateEvent from '../components/CreateEvent';
-import EventDetails from '../components/EventDetails';
+import DetailsEvent from '../components/DetailsEvent';
 import OrganiserDashboard from '../components/OrganiserDashboard';
 
 import SavedEventPage from '../components/SavedEventPage';
@@ -21,7 +21,7 @@ const OrganizerAccountDesktop = () => {
   const [showSupport, setShowSupport] = useState(false);
   const [showManageEvent, setShowManageEvent] = useState(false);
   const [showCreateEvent,setShowCreateEvent]= useState(false);
-  const [showEventDetails,setShowEventDetails]= useState(false);
+  const [showDetailsEvent,setShowDetailsEvent]= useState(false);
   
   const [showSavedPageEvent,setShowSavedPageEvent]= useState(false);
   
@@ -32,7 +32,7 @@ const OrganizerAccountDesktop = () => {
     setShowSupport(false);
     setShowManageEvent(false);
     setShowCreateEvent(false);
-    setShowEventDetails(false)
+    setShowDetailsEvent(false)
     setShowSavedPageEvent(false);
     setShowOrganiserDashboard(false);
   };
@@ -54,7 +54,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(false);
-    setShowEventDetails(false)
+    setShowDetailsEvent(false)
     setShowOrganiserDashboard(false)
     setShowSavedPageEvent(false);
   };
@@ -65,7 +65,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(false);
-    setShowEventDetails(false)
+    setShowDetailsEvent(false)
     setShowOrganiserDashboard(false)
     setShowSavedPageEvent(false);
   };
@@ -76,7 +76,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(true);
     setShowCreateEvent(false);
-    setShowEventDetails(false)
+    setShowDetailsEvent(false)
     setShowOrganiserDashboard(false)
     setShowSavedPageEvent(false);
   };
@@ -87,10 +87,7 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(true);
-    setShowEventDetails(false)
-  };
- 
-
+    setShowDetailsEvent(false)
     setShowOrganiserDashboard(false)
   };
   const handleOrganiserDashboard = () => {
@@ -168,10 +165,8 @@ const OrganizerAccountDesktop = () => {
           :showCreateEvent ? (
             <CreateEvent isScrolled={isScrolled} menuOpen={menuOpen} />
           ) 
-          :showEventDetails ? (
-            <EventDetails isScrolled={isScrolled} menuOpen={menuOpen} />
-          ) 
-          :
+          :showDetailsEvent ? (
+            <DetailsEvent isScrolled={isScrolled} menuOpen={menuOpen} />
           ) 
           :showSavedPageEvent? (
             <SavedEventPage isScrolled={isScrolled} menuOpen={menuOpen} />
@@ -184,7 +179,7 @@ const OrganizerAccountDesktop = () => {
               <Route path="/support" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/manageEvent" element={<ManageEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/createEvent" element={<CreateEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
-              <Route path="/eventedetails" element={<EventDetails menuOpen={menuOpen} />} />
+              <Route path="/eventedetails" element={<DetailsEvent menuOpen={menuOpen} />} />
               
               <Route path="/SavedEventPage" element={<SavedEventPage isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               {/* Add more routes as needed */}

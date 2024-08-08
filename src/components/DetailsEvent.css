@@ -1,0 +1,220 @@
+/* CSS for EventDetails */
+.EventDetails {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+    background-color: #000; /* Background color of the container */
+    padding: 20px; /* Add padding for better spacing */
+    position: relative; /* Ensure it stacks properly */
+}
+
+.EventDetails form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Increased max width for more space */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.EventDetails h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.EventDetails .form-group {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    margin-bottom: 10px; /* Margin between form groups */
+}
+
+.EventDetails .form-group label {
+    width: 30%; /* Set width of the label */
+    font-weight: bold;
+    text-align: left; /* Align text to the left within the label */
+    min-width: 120px; /* Minimum width for consistency */
+    color: #000; /* Set label color to black */
+}
+
+.EventDetails .form-group input, 
+.EventDetails .form-group textarea {
+    width: 70%; /* Adjust width to fit within the form */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #dddcdc;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    margin-left: 10px; /* Space between label and input field */
+}
+
+.EventDetails .textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.EventDetails .lineup-group {
+    margin-bottom: 20px; /* Margin between lineup group and other elements */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.EventDetails .lineup-group label {
+    width: 30%; /* Set width of the label */
+    font-weight: bold;
+    margin-right: 10px; /* Space between label and textarea */
+    min-width: 120px; /* Minimum width for consistency */
+    margin-left: 70px; /* Move the label further to the right */
+}
+
+.EventDetails .lineup-group .lineup-textarea {
+    width: 300px; /* Fixed width for lineup text area */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #dddcdc;
+    resize: vertical; /* Allow vertical resizing */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.EventDetails .add-lineup-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px; /* Reduced padding */
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size */
+    width: auto; /* Adjust width to fit content */
+    align-self: flex-end; /* Align button to the right */
+    margin-top: 10px; /* Space between textarea and button */
+}
+
+.EventDetails .add-lineup-button:hover {
+    background-color: #333;
+}
+
+.EventDetails .lineup-group ul {
+    padding-left: 20px;
+    margin-top: 0;
+    list-style-type: disc;
+}
+
+.EventDetails .buttons {
+    display: flex;
+    justify-content: center; /* Center align buttons */
+    margin-top: 20px;
+}
+
+.EventDetails .button[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.EventDetails .button[type="submit"]:hover {
+    background-color: #0e0707;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .EventDetails {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .EventDetails form {
+        padding: 20px; /* Adjust padding inside form */
+    }
+
+    .EventDetails .form-group,
+    .EventDetails .lineup-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .EventDetails .form-group label,
+    .EventDetails .lineup-group label {
+        margin-bottom: 5px;
+        margin-right: 0;
+        width: 100%; /* Full width for labels on small screens */
+    }
+
+    .EventDetails .form-group input, 
+    .EventDetails .form-group textarea,
+    .EventDetails .lineup-group .lineup-textarea {
+        width: 100%; /* Full width for inputs and textareas on small screens */
+    }
+
+    .EventDetails .add-lineup-button {
+        width: 100%; /* Full width for button on small screens */
+    }
+
+    .EventDetails .button[type="submit"] {
+        width: 100%; /* Full width for submit button on small screens */
+    }
+}
+@font-face {
+    font-family: montserrat;
+    src: url(../assets/fonts/Montserrat-Thin.ttf);
+  }
+
+  @font-face {
+    font-family: oswald;
+    src: url(../assets/fonts/Oswald-Light.ttf);
+  }
+.orgevent-details {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(19, 11, 11); /* Added border */
+    max-height: 300px; /* Set a maximum height for the scrollable area */
+    overflow-y: auto; /* Make the content scrollable */
+
+  }
+
+  p
+  {
+    font-family: montserrat , sans-serif;    
+    font-size: 1em; /* Adjust font size as needed */
+  }
+
+  .header99
+  {
+    font-family: oswald , sans-serif;    
+    font-size: 1.7em; /* Adjust font size as needed */
+    color: red;
+  }
+  
+  .event-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .event-actions button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .event-actions button:hover {
+    transition: 0.5s;
+    font-size: 0.9rem;
+    color: red;
+  }
+
+  .space
+  {
+    margin-right: 10px;
+  }
+
+
+  

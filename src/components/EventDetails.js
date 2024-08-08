@@ -1,152 +1,32 @@
-
-//import { EventDetails } from '@testing-library/react';
-import React, { useState } from 'react';
-//import './EventDetails.css';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faThumbsUp, faShare, faComment, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import {  faShare, faComment } from '@fortawesome/free-solid-svg-icons';
 import './EventDetails.css';
 
 
-
-
-
-
-
-function EventDetails() {
-  const [lineup, setLineup] = useState([]);
-  const [lineupInput, setLineupInput] = useState('');
-  const [additionalInfo, setAdditionalInfo] = useState('');
-  const [eventName, setEventName] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
-  const [location, setLocation] = useState('');
-  const [description, setDescription] = useState('');
-
-  const handleAddLineup = () => {
-    if (lineupInput.trim()) {
-      setLineup([...lineup, lineupInput.trim()]);
-      setLineupInput(''); // Clear the input field after adding
-    }
-  };
-
-  const handleLineupInputChange = (e) => {
-    setLineupInput(e.target.value);
-  };
-
-  const handleAdditionalInfoChange = (e) => {
-    setAdditionalInfo(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you can add form submission logic
-    console.log({
-      eventName,
-      startDate,
-      endDate,
-      location,
-      description,
-      lineup,
-      additionalInfo,
-    });
-  };
-
+const EventDetails = ({ event }) => {
   return (
-    <div className="EventDetails">
-      <form onSubmit={handleSubmit}>
-        <div className="section">
-          <h2>Event Details</h2>
-          <div className="form-group">
-            <label htmlFor="event-name">Event Name:</label>
-            <input 
-              type="text" 
-              id="event-name"
-              name="eventName"
-              value={eventName}
-              onChange={(e) => setEventName(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="start-date">Start of Event:</label>
-            <input 
-              type="datetime-local" 
-              id="start-date"
-              name="startDate"
-              value={startDate}
-              onChange={(e) => setStartDate(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="end-date">End of Event:</label>
-            <input 
-              type="datetime-local" 
-              id="end-date"
-              name="endDate"
-              value={endDate}
-              onChange={(e) => setEndDate(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="location">Location:</label>
-            <input 
-              type="text" 
-              id="location"
-              name="location"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="description">Description:</label>
-            <textarea 
-              id="description" 
-              name="description"
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              required
-            ></textarea>
-          </div>
-          <div className="lineup-group">
-            <label htmlFor="lineup">Line Up:</label>
-            <textarea 
-              id="lineup" 
-              name="lineup"
-              value={lineupInput}
-              onChange={handleLineupInputChange}
-              className="lineup-textarea"
-            ></textarea>
-            <button 
-              type="button" 
-              className="add-lineup-button"
-              onClick={handleAddLineup}
-            >
-              +
-            </button>
-            <ul>
-              {lineup.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="form-group">
-            <label htmlFor="additional-info">Additional Information:</label>
-            <textarea 
-              id="additional-info" 
-              name="additionalInfo"
-              value={additionalInfo}
-              onChange={handleAdditionalInfoChange}
-              rows="4"
-            ></textarea>
-          </div>
-        </div>
-        <div className="buttons">
-          <button type="submit">Post</button>
-        </div>
-      </form>
+    <div>
+      <div className="orgevent-details">
+        <h2 className='header99'>About Event . . .</h2>
+        <p>🎉🧇 Join <strong>{event.host}</strong> for a Good Time! 🥞</p>
+        <p> 📅 <strong className='space'>Date: </strong> {event.date}</p>
+        <p> 🕒 <strong className='space'>Time: </strong> {event.time}</p>
+        <p> 📍 <strong className='space'>Location: </strong> {event.location}</p>
+        <p>  {event.description}</p>
+        <p>  {event.description1}</p>
+        <p>  {event.description2}</p>
+        <p>  {event.description3}</p>
+      </div>
+      <div className="event-actions">
+        {/* <button><FontAwesomeIcon icon={faThumbsUp} /> Like</button> */}
+        <button><FontAwesomeIcon icon={faShare} /> Share</button>    
+        <button><FontAwesomeIcon icon={faComment} /> Chat</button>
+        {/* <button><FontAwesomeIcon icon={faUserPlus} /> Follow</button> */}
+      </div>
     </div>
   );
-}
+};
 
 export default EventDetails;
