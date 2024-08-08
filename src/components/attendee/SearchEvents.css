@@ -1,0 +1,56 @@
+.searchEventsPage{
+   
+    width: 100%;
+   height: 100vh;
+}
+.searchEvents-container {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    height: 100vh;
+  }
+  .searchEvents-div {
+    background-color: black;
+    display: flex;
+    align-items: center;
+   
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  .searchEvents-div input {
+    background-color: black;
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .searchButton-div {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 100px;
+    button {
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #555;
+      }
+  }
