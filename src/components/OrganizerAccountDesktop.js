@@ -9,12 +9,9 @@ import Support from '../components/Support';
 import Footer from '../components/Footer';
 import ManageEvent from '../components/ManageEvent';
 import CreateEvent from '../components/CreateEvent';
-<<<<<<< HEAD
 import OrganiserDashboard from '../components/OrganiserDashboard';
 
-=======
 import SavedEventPage from '../components/SavedEventPage';
->>>>>>> dbdee1b726b82b14d11f0405927f032e124baad2
 const OrganizerAccountDesktop = () => {
   const [showOrganiserDashboard,setShowOrganiserDashboard]= useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,13 +20,10 @@ const OrganizerAccountDesktop = () => {
   const [showSupport, setShowSupport] = useState(false);
   const [showManageEvent, setShowManageEvent] = useState(false);
   const [showCreateEvent,setShowCreateEvent]= useState(false);
-<<<<<<< HEAD
   
-=======
   const [showSavedPageEvent,setShowSavedPageEvent]= useState(false);
   
 
->>>>>>> dbdee1b726b82b14d11f0405927f032e124baad2
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
     setShowSettings(false);
@@ -166,11 +160,8 @@ const OrganizerAccountDesktop = () => {
               <Route path="/support" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/manageEvent" element={<ManageEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/createEvent" element={<CreateEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
-<<<<<<< HEAD
               
-=======
               <Route path="/SavedEventPage" element={<SavedEventPage isScrolled={isScrolled} menuOpen={menuOpen}  />} />
->>>>>>> dbdee1b726b82b14d11f0405927f032e124baad2
               {/* Add more routes as needed */}
             </Routes>
           )
