@@ -14,7 +14,7 @@ import OrganiserDashboard from '../components/OrganiserDashboard';
 import SavedEventPage from '../components/SavedEventPage';
 const OrganizerAccountDesktop = () => {
   const [showOrganiserDashboard,setShowOrganiserDashboard]= useState(true);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [showSupport, setShowSupport] = useState(false);
@@ -31,6 +31,7 @@ const OrganizerAccountDesktop = () => {
     setShowManageEvent(false);
     setShowCreateEvent(false);
     setShowSavedPageEvent(false);
+    setShowOrganiserDashboard(false);
   };
 
   const handleScroll = () => {
@@ -84,6 +85,12 @@ const OrganizerAccountDesktop = () => {
   };
   const handleOrganiserDashboard = () => {
     setShowSavedPageEvent(false);
+    setShowSupport(false);
+    setShowSettings(false);
+    setMenuOpen(true);
+    setShowManageEvent(false);
+    setShowCreateEvent(false);
+    setShowOrganiserDashboard(true)
   };
   const handleSavedEventPageClick = () => {
     setShowSupport(false);
@@ -91,9 +98,10 @@ const OrganizerAccountDesktop = () => {
     setMenuOpen(true);
     setShowManageEvent(false);
     setShowCreateEvent(false);
-    setShowOrganiserDashboard(true)
+    setShowOrganiserDashboard(false)
     setShowSavedPageEvent(true);
   };
+  
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -160,7 +168,6 @@ const OrganizerAccountDesktop = () => {
               <Route path="/support" element={<Support isScrolled={isScrolled} menuOpen={menuOpen} />} />
               <Route path="/manageEvent" element={<ManageEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               <Route path="/createEvent" element={<CreateEvent isScrolled={isScrolled} menuOpen={menuOpen}  />} />
-              
               <Route path="/SavedEventPage" element={<SavedEventPage isScrolled={isScrolled} menuOpen={menuOpen}  />} />
               {/* Add more routes as needed */}
             </Routes>
