@@ -1,0 +1,234 @@
+/* General styles */
+
+.organizer-container {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0; /* Removed padding */
+    z-index: 1000;
+    overflow: hidden;
+    padding: 0;
+    margin-top: 70px;
+    
+  }
+  
+  .organizer-header {
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1100;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .burger-icon {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-left: 30px;
+  }
+  
+  .menu-dropdown {
+
+    background-color: black;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 280px;
+    height: calc(100% - 100px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 1100;
+    margin-top: 0; /* Removed margin-top */
+  }
+  
+  .menu-dropdown.open {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 30px 0;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    width: 80%;
+  }
+  
+  .menu-item:hover,
+  .menu-item:hover .arrow {
+    background-color: #f5bbbb;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .logo {
+    margin-left: 100px;
+  }
+  
+  .logo-svg {
+    height: 90px;
+    transition: height 0.3s ease;
+  }
+  
+  .user-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    gap: 10px;
+  }
+  
+  .user-icon {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+  }
+  .user-rate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bell-icon {
+    margin-left: 20px;
+    position: relative;
+    font-size: 1.5rem;
+    margin-right: 50px;
+  }
+  
+  /*Dropdown menu*/
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:   
+   1;
+    padding: 0;
+    margin: 0;
+    list-style:   
+   none; /* Remove list-style */
+  }
+  
+  .dropdown-content a {
+    display: block;
+  padding: 12px 16px;
+  text-decoration: none; /* Remove underline */
+  color: black;
+  display: block;
+  text-align: left;
+  }
+  .menu-item:hover .dropdown-content {
+    display: block;
+  }
+  
+  .notification-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: white;
+    color: red;
+    border-radius: 50%;
+    padding: 3px 5px;
+    font-size: 0.8rem;
+    margin-right: 35px;
+  }
+  
+  .notification {
+    position: relative;
+  }
+  
+  .user-account {
+    font-size: 0.9rem;
+    color: red;
+  }
+  
+  .user-name .check-icon {
+    margin-left: 5px;
+    color: yellow;
+  }
+  
+  .user-name {
+    font-weight: bold;
+  }
+  
+  .user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .arrow {
+    color: red;
+    background-color: white;
+  }
+  
+  .content {
+    padding-top: 100px; /* Adjust based on header height */
+    display: flex;
+    justify-content: flex-start; /* Align content to start */
+    width: 100%;
+    transition: transform 0.3s ease;
+    margin-top: 0; /* Ensures no space between content and header */
+  }
+  
+  .content.slide-in {
+    transform: translateX(280px); /* Width of the sidebar */
+  }
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section h2 {
+    color: red;
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding-left: 70px;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    flex: 0 0 150px; /* Adjust the label width as needed */
+    margin-right: 10px;
+    font-size: 18px;color: rgb(255, 255, 255);
+    padding-left: 70px;
+  }
+  
+  .heading {
+    font-family: Bernard MT Condensed;
+    font-size: 40px; /* Adjust based on desired size */
+    font-weight: bold;
+    color: red;
+    position: relative;
+    margin-left: 20px; /* Space between line and text */
+}
+
+.heading::before {
+    content: '';
+    position: absolute;
+    left: -20px; /* Position of the vertical line */
+    top: 0;
+    bottom: 0;
+    width: 5px; /* Thickness of the vertical line */
+    background-color: rgb(255, 1, 1);
+}
+  
+  
