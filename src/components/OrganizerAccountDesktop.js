@@ -11,7 +11,7 @@ import ManageEvent from '../components/ManageEvent';
 import CreateEvent from '../components/CreateEvent';
 import DetailsEvent from '../components/DetailsEvent';
 import OrganiserDashboard from '../components/OrganiserDashboard';
-
+import SearchArtistResults from './SearchArtistResults';
 import SavedEventPage from '../components/SavedEventPage';
 const OrganizerAccountDesktop = () => {
   const [showOrganiserDashboard,setShowOrganiserDashboard]= useState(true);
@@ -22,7 +22,7 @@ const OrganizerAccountDesktop = () => {
   const [showManageEvent, setShowManageEvent] = useState(false);
   const [showCreateEvent,setShowCreateEvent]= useState(false);
   const [showDetailsEvent,setShowDetailsEvent]= useState(false);
-  
+  const [showSearchArtistResults,setShowSearchArtistResults]= useState(false);
   const [showSavedPageEvent,setShowSavedPageEvent]= useState(false);
   
 
@@ -57,6 +57,7 @@ const OrganizerAccountDesktop = () => {
     setShowDetailsEvent(false)
     setShowOrganiserDashboard(false)
     setShowSavedPageEvent(false);
+    setShowSearchArtistResults(false)
   };
 
   const handleSupportClick = () => {
@@ -68,6 +69,7 @@ const OrganizerAccountDesktop = () => {
     setShowDetailsEvent(false)
     setShowOrganiserDashboard(false)
     setShowSavedPageEvent(false);
+    setShowSearchArtistResults(false)
   };
 
   const handleManageEventClick = () => {
@@ -79,6 +81,7 @@ const OrganizerAccountDesktop = () => {
     setShowDetailsEvent(false)
     setShowOrganiserDashboard(false)
     setShowSavedPageEvent(false);
+    setShowSearchArtistResults(false)
   };
 
   const handleCreateEventClick = () => {
@@ -89,6 +92,7 @@ const OrganizerAccountDesktop = () => {
     setShowCreateEvent(true);
     setShowDetailsEvent(false)
     setShowOrganiserDashboard(false)
+    setShowSearchArtistResults(false)
   };
   const handleOrganiserDashboard = () => {
     setShowSavedPageEvent(false);
@@ -98,6 +102,7 @@ const OrganizerAccountDesktop = () => {
     setShowManageEvent(false);
     setShowCreateEvent(false);
     setShowOrganiserDashboard(true)
+    setShowSearchArtistResults(false)
   };
   const handleSavedEventPageClick = () => {
     setShowSupport(false);
@@ -107,6 +112,7 @@ const OrganizerAccountDesktop = () => {
     setShowCreateEvent(false);
     setShowOrganiserDashboard(false)
     setShowSavedPageEvent(true);
+    setShowSearchArtistResults(false)
   };
   
   useEffect(() => {
@@ -170,7 +176,11 @@ const OrganizerAccountDesktop = () => {
           ) 
           :showSavedPageEvent? (
             <SavedEventPage isScrolled={isScrolled} menuOpen={menuOpen} />
-          ) :
+          ) 
+          :showSearchArtistResults ? (
+            <SearchArtistResults isScrolled={isScrolled} menuOpen={menuOpen} />
+          ) 
+          :
           (
             
             <Routes>
@@ -182,6 +192,7 @@ const OrganizerAccountDesktop = () => {
               <Route path="/eventedetails" element={<DetailsEvent menuOpen={menuOpen} />} />
               
               <Route path="/SavedEventPage" element={<SavedEventPage isScrolled={isScrolled} menuOpen={menuOpen}  />} />
+              <Route path="/searchartistresults" element={<SearchArtistResults isScrolled={isScrolled} menuOpen={menuOpen} />} />
               {/* Add more routes as needed */}
             </Routes>
           )
