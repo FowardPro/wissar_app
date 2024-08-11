@@ -4,11 +4,11 @@ import ReactDOM from "react-dom/client"
 import OrganizerAccountDesktop from "./components/OrganizerAccountDesktop"
 
 import AttendeeDashboard from './components/attendee/AttendeeDashboard'
->>>>>>> 12258a6f4d187b99baf64a74fcdf3a28facd0c7a
+import ArtistHomePage from './components/ArtistHomePage'
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
-    <OrganizerAccountDesktop />
+    <ArtistHomePage />
   </React.StrictMode>
 )
