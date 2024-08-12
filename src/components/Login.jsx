@@ -3,7 +3,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from "react-router-dom";
 import Header from './Header';
-import image from './assets/Image.jpg';
+// import image from './assets/Image.jpg';
+import image from '../assets/photos/Tyla_SignUp.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons'; // Import the icon you want to use
 

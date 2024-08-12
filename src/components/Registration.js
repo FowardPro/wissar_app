@@ -6,12 +6,18 @@ import image from '../assets/photos/ZTM trademark transparent.png'; // Adjust th
 const Registration = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
 
     const handleSignUp = (e) => {
         e.preventDefault();
         // Handle sign-up logic here
         console.log('Email:', email);
         console.log('Password:', password);
+        console.log('firstName:', firstName);
+        console.log('lastName:', lastName);
+        console.log('confirmPassword:', confirmPassword);
     };
 
     return (
@@ -29,6 +35,30 @@ const Registration = () => {
                         <div className="input-box">
                             <header>Create account</header>
                             <form onSubmit={handleSignUp}>
+                            <div className="input-field">
+                                    <input
+                                        type="text"
+                                        className="input"
+                                        id="firstname"
+                                        required
+                                        autoComplete="off"
+                                        value={firstName}
+                                        onChange={(e) => setFirstName(e.target.value)}
+                                    />
+                                    <label htmlFor="email">First Name</label>
+                                </div>
+                                <div className="input-field">
+                                    <input
+                                        type="text"
+                                        className="input"
+                                        id="lastName"
+                                        required
+                                        autoComplete="off"
+                                        value={lastName}
+                                        onChange={(e) => setLastName(e.target.value)}
+                                    />
+                                    <label htmlFor="email">Last Name</label>
+                                </div>
                                 <div className="input-field">
                                     <input
                                         type="text"
@@ -51,6 +81,17 @@ const Registration = () => {
                                         onChange={(e) => setPassword(e.target.value)}
                                     />
                                     <label htmlFor="pass">Password</label>
+                                </div>
+                                <div className="input-field">
+                                    <input
+                                        type="confirmPassword"
+                                        className="input"
+                                        id="pass"
+                                        required
+                                        value={confirmPassword}
+                                        onChange={(e) => setConfirmPassword(e.target.value)}
+                                    />
+                                    <label htmlFor="pass">Confirm Password</label>
                                 </div>
                                 <div className="input-field">
                                     <input type="submit" className="submit" value="Sign Up" />
