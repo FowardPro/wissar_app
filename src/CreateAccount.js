@@ -1,14 +1,16 @@
+// CreateAccount.js
+
 import React from 'react';
-import { useNavigate, Link } from 'react-router-dom';
 import './CreateAccount.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import artistImage from './assets/photos/Tyla_SignUp.jpg'; // Adjust the path accordingly
+import artistImage from './assets/photos/Tyla_SignUp.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const CreateAccount = () => {
     const navigate = useNavigate();
 
     const handleEventOrganizerClick = () => {
-        navigate('/registration');
+        navigate('/registration'); // This will replace the CreateAccount with Registration
     };
 
     return (
@@ -26,7 +28,7 @@ const CreateAccount = () => {
                             <button className="role-btn" onClick={handleEventOrganizerClick}>EVENT ORGANISER</button>
                             <button className="role-btn">ATTENDEE</button>
                         </div>
-                        <p className="login-prompt">Already have an account? <Link to="/login">Login here.</Link></p>
+                        <p className="login-prompt">Already have an account? <a href="/login">Login here.</a></p>
                     </div>
                 </div>
             </div>

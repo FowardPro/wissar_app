@@ -1,13 +1,15 @@
+// App.js
+
 import React, { useRef } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import WelcomeVideo from './components/WelcomeVideo';
 import MiddelVideo from './components/MiddelVideo';
 import UpcomingEvents from './components/UpcomingEvents';
 import CreateAccount from './CreateAccount';
 import Footer from './components/Footer';
+import Registration from './components/Registration'; // Import the Registration component
 import './App.css';
-
-
 
 function App() {
   const signupRef = useRef(null);
@@ -35,7 +37,10 @@ function App() {
           <h2 ref={signupRef}>SignUp with Wissar</h2>
           <p>Booking artists has never been this easy.</p>
         </div>        
-        <CreateAccount />
+        <Routes>
+          <Route path="/" element={<CreateAccount />} />
+          <Route path="/registration" element={<Registration />} />
+        </Routes>
       </main>
       <Footer />
     </div>
