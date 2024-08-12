@@ -54,8 +54,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    border: 1px solid white;
-    margin-bottom: 100px;
+    /* border: 1px solid white; */
+    margin-bottom: 50px;
 }
 
 .artist-card {
@@ -90,8 +90,15 @@
     background-color: black;
     color: white;
     border: 2px solid white;
-    padding: 10px 20px;
+    /* /padding: 10px 20px; */
+    margin-bottom: 200px ;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+}
+.search-artist-searchButton-div{
+    margin: top 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
