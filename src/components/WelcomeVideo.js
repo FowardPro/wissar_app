@@ -10,6 +10,7 @@ const WelcomeVideo = ({ scrollToSignUp }) => {
         Your browser does not support the video tag.
       </video>
       <button className="signup-button" onClick={scrollToSignUp}>Join Wissa</button>
+
     </div>
   );
 };
