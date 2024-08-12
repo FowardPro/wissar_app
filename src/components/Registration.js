@@ -9,15 +9,20 @@ const Registration = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
+    const [companyName, setcompanyName] = useState('');
 
     const handleSignUp = (e) => {
         e.preventDefault();
         // Handle sign-up logic here
-        console.log('Email:', email);
-        console.log('Password:', password);
+       
         console.log('firstName:', firstName);
         console.log('lastName:', lastName);
+        console.log('Email:', email);
+        console.log('companyName:', companyName);
+        console.log('Password:', password);
         console.log('confirmPassword:', confirmPassword);
+        
+       
     };
 
     return (
@@ -58,6 +63,18 @@ const Registration = () => {
                                         onChange={(e) => setLastName(e.target.value)}
                                     />
                                     <label htmlFor="email">Last Name</label>
+                                </div>
+                                <div className="input-field">
+                                    <input
+                                        type="text"
+                                        className="input"
+                                        id="companyName"
+                                        required
+                                        autoComplete="off"
+                                        value={companyName}
+                                        onChange={(e) => setcompanyName(e.target.value)}
+                                    />
+                                    <label htmlFor="email">Company Name</label>
                                 </div>
                                 <div className="input-field">
                                     <input
