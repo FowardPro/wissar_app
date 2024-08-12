@@ -9,8 +9,7 @@ const WelcomeVideo = ({ scrollToSignUp }) => {
         <source src={videoFile} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <button className="signup-button" onClick={scrollToSignUp}>Sign up</button>
-      <button className="login-button" >Login</button>
+      <button className="signup-button" onClick={scrollToSignUp}>Join Wissa</button>
     </div>
   );
 };
