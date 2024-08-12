@@ -1,0 +1,95 @@
+.mange-event-main-container{
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+}
+.manage-event-body{
+  background-color: black;
+  width: 100%;
+  padding-bottom: 100px;
+  margin-top: -10px;
+  
+
+}
+.manage-events-container {
+  background-color: white;
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 5%;
+  width: calc(60% + 5px);
+  margin-top: 40px;
+  height: auto;
+  min-height: 500px;
+  
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.event-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  margin-bottom: 10px;
+  background-color: #83828252;
+  border-radius: 5px;
+}
+
+.event-details h3 {
+  margin: 0px;
+  margin-left: -30px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #504f4f;
+ 
+  
+  
+}
+
+.event-details p {
+  margin: 5px 0 0;
+  margin-left: -25px;
+  font-size: 18px;
+  
+  color: #666;
+}
+
+.edit-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  filter: invert(1) brightness(0.8); /* Invert to white and adjust brightness to gray */
+
+
+}
+
+.saved-events-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.saved-events-button:hover {
+  background-color: #f0f0f0;
+}
+
+.manage-events-container h2 {
+  color: rgb(29, 28, 28); /* Change the header color to white */
+}
+
+
