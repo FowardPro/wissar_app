@@ -10,7 +10,7 @@ const CreateAccount = () => {
     const navigate = useNavigate();
 
     const handleEventOrganizerClick = () => {
-        navigate('/registration'); // This will replace the CreateAccount with Registration
+        navigate('/registration'); 
     };
 
     return (

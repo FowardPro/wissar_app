@@ -13,12 +13,15 @@ const Longing = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         // Here you would typically verify the login credentials
-       
         console.log('Email:', email);
         console.log('Password:', password);
 
         // After successful login, navigate to the OrganizerAccountDesktop page
         navigate('/organizer-account-desktop');
+    };
+
+    const handleSignUpClick = () => {
+        navigate('/register'); // Navigate to the Registration component
     };
 
     return (
@@ -64,7 +67,7 @@ const Longing = () => {
                                     </div>
                                 </form>
                                 <div className="signin">
-                                    <span>Do not have an account? <a href="#">Sign Up here</a></span>
+                                    <span>Do not have an account? <a href="#" onClick={handleSignUpClick}>Sign Up here</a></span>
                                 </div>
                             </div>
                         </div>
