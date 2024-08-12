@@ -1,10 +1,12 @@
 
 import Header from './Header';
-import React from 'react';
+// import React from 'react';
+import React, { useState } from 'react';
 import './SearchArtistResults.css';
 import sjava from '../assets/photos/sjava.png'
 
 const SearchArtistResults = () => {
+
     return (
         <div className='search-artist-results-container'>
             <div><h2 className="search-artist-title"> |  Search Artist</h2></div>
