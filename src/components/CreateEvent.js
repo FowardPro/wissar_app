@@ -44,6 +44,7 @@ const CreateEvent = () => {
               <input type="text" id="lineUp" name="lineUp" />
               <div className="plus-icon">
               <Link to={'/searchartistresults'}>
+               <FiPlusCircle size={25}/>
               </Link>
               </div>
               
