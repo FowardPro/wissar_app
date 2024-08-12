@@ -3,7 +3,7 @@ import Header from './components/Header';
 import WelcomeVideo from './components/WelcomeVideo';
 import MiddelVideo from './components/MiddelVideo';
 import UpcomingEvents from './components/UpcomingEvents';
-import Registration from './components/Registration';
+import CreateAccount from './CreateAccount';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -35,7 +35,7 @@ function App() {
           <h2 ref={signupRef}>SignUp with Wissar</h2>
           <p>Booking artists has never been this easy.</p>
         </div>        
-        <Registration />
+        <CreateAccount />
       </main>
       <Footer />
     </div>
