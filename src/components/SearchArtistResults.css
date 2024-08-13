@@ -1,5 +1,5 @@
 .search-artist-results-container {
-    background-color: white;
+    background-color: black;
     width: 100%;
     height: 100%;
     font-family: Arial, sans-serif;
@@ -32,14 +32,25 @@
     color: white;
     margin-top: 50px;
     margin-right: 100px;
+    /* position: fixed; */
 }
-
+.event-org-title-container{
+    width: 100%;
+    height:100px;
+    position: fixed;
+    background-color: #fff;
+    margin-top: -100px;
+    margin-left: -10px;
+    z-index: 1000;
+}
 .search-artist-title {
     color: red;
     font-weight: bold;
-    position: sticky;
+    position: fixed; 
     background-color: white;
     z-index: 1000;
+    width: 100%;
+    margin-top: 40px;
 }
 
 .search-artist-suggested-title {
@@ -51,30 +62,36 @@
 }
 
 .search-artist-suggested-artists {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    /* border: 1px solid white; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 5 columns */
+    grid-template-rows: repeat(2, 1fr); /* 5 rows */
+    gap: 5px;
+    /* border: 1px solid white;  */
     margin-bottom: 50px;
+    margin-left: 100px;
+    width: 88%;
+    height: fit-content;
+    grid-auto-rows: minmax(150px, 60); /* Minimum height of each row */
 }
 
 .artist-card {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     margin-bottom: 20px;
-    margin-left: 100px;
-    margin-right: 50px;
+    margin-left: -10px;
+    margin-top: 10px;
+    margin-right:50px;
 }
 
 .artist-card img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 
 .artist-card h3 {
-    font-size: 30px;
+    font-size: 25px;
     margin: 0;
     font-family: 'Brush Script MT', cursive;
     color: white;
@@ -82,7 +99,7 @@
 
 .artist-card p {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
 }
 
@@ -91,7 +108,7 @@
     color: white;
     border: 2px solid white;
     /* /padding: 10px 20px; */
-    margin-bottom: 200px ;
+    margin-bottom: 20px ;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
@@ -99,6 +116,20 @@
 .search-artist-searchButton-div{
     margin: top 0;
     display: flex;
+    height: 25%;
     justify-content: center;
     align-items: center;
+    /* border: 2px solid white; */
+}
+.empty-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold; /* Font weight */
+    /* font-family: 'Inter', sans-serif; */
+    /* border: 1px solid #ddd; */
+    /* border-radius: 8px; */
 }
