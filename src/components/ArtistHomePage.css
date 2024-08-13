@@ -1,6 +1,6 @@
 /* General styles */
 
-  .organizer-container {
+.organizer-container {
     background-color: rgb(255, 255, 255);
     position: relative;
     width: 100%;
@@ -83,13 +83,21 @@
   
   .user-section {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     color: #fff;
+    gap: 10px;
   }
   
   .user-icon {
     margin-right: 10px;
+    margin-bottom: 5px;
     font-size: 1.5rem;
+  }
+  .user-rate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .bell-icon {
@@ -97,6 +105,33 @@
     position: relative;
     font-size: 1.5rem;
     margin-right: 50px;
+  }
+  
+  /*Dropdown menu*/
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:   
+   1;
+    padding: 0;
+    margin: 0;
+    list-style:   
+   none; /* Remove list-style */
+  }
+  
+  .dropdown-content a {
+    display: block;
+  padding: 12px 16px;
+  text-decoration: none; /* Remove underline */
+  color: black;
+  display: block;
+  text-align: left;
+  }
+  .menu-item:hover .dropdown-content {
+    display: block;
   }
   
   .notification-count {
@@ -117,7 +152,7 @@
   
   .user-account {
     font-size: 0.9rem;
-    color: yellow;
+    color: red;
   }
   
   .user-name .check-icon {
@@ -195,7 +230,5 @@
     width: 5px; /* Thickness of the vertical line */
     background-color: rgb(255, 1, 1);
 }
-html {
-  scroll-behavior: smooth;
-}
+  
   

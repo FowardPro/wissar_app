@@ -24,7 +24,7 @@
     }
 
     .side-image {
-        background-image: url("../assets/photos/Tyla_SignUp.jpg"); /* Adjust the path accordingly */
+        background-image: url("../../assets/photos/Tyla_SignUp.jpg"); /* Adjust the path accordingly */
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -40,7 +40,7 @@
 
     .row {
         width: 900px;
-        height: 550px;
+        height: 650px;
         border-radius: 10px;
         background: #fff;
         padding: 0px;
@@ -192,3 +192,6 @@
         }
     }
 }
+html {
+    scroll-behavior: smooth;
+  }

@@ -1,19 +1,22 @@
 import React, { useRef } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import WelcomeVideo from './components/WelcomeVideo';
+import WelcomeVideo from './components/Landing_Page/WelcomeVideo';
 import MiddelVideo from './components/MiddelVideo';
 import UpcomingEvents from './components/UpcomingEvents';
-import Registration from './components/Registration';
+import CreateAccount from './CreateAccount';
 import Footer from './components/Footer';
+import Registration from './components/Landing_Page/Registration';
+import Longing from './components/Landing_Page/Longing';
 import './App.css';
-
-
 
 function App() {
   const signupRef = useRef(null);
 
   const scrollToSignUp = () => {
-    signupRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (signupRef.current) {
+      signupRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -24,18 +27,24 @@ function App() {
         <div className='change_background1'>
           <h2>Welcome to Wissar</h2>
           <p>Your platform for booking artists.</p>
-        </div> 
+        </div>
         <UpcomingEvents />
         <div className='change_background1'>
           <h2>South African Best Artists</h2>
           <p>Booking artists has never been this easy.</p>
         </div>
         <MiddelVideo />
-        <div className='change_background'>
-          <h2 ref={signupRef}>SignUp with Wissar</h2>
+        <div ref={signupRef} className='change_background'>
+          <h2>SignUp with Wissar</h2>
           <p>Booking artists has never been this easy.</p>
-        </div>        
-        <Registration />
+        </div>
+
+        <Routes>
+          <Route path="/" element={<CreateAccount />} />
+          <Route path="/registration" element={<Registration />} />
+          <Route path="/Longing" element={<Longing />} />
+
+        </Routes>
       </main>
       <Footer />
     </div>

@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'; // Import Link here
 import './style.css';
-import Header from './Header';
-import image from './assets/Image.jpg';
+import Header from '../Header';
+// import image from './assets/Image.jpg';
+import image from '../../assets/photos/Tyla_SignUp.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons'; // Import an icon for registration
 

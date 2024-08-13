@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Whisper&display=swap');
+.event-card {
+    background-color: black;
+    color: white; /* Set text color to white for black background */
+    border: 1px solid white; /* White border around the entire card */
+    padding: 20px; /* Add some padding inside the card */
+    margin: auto;
+    display: flex; /* Make the card a flex container for horizontal layout */
+    flex-direction: column; /* Stack elements vertically by default */
+    box-sizing: border-box;
+  }
+  
+  .event-header {
+    display: flex; /* Make the header a flex container */
+    justify-content: space-between;
+    align-items: center; /* Align organizer details vertically at the top */
+  }
+  
+  .organizer-details {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .organizer-photo {
+    margin-right: 10px; /* Add space between the image and text */
+    width: 100px; /* Set a fixed width for the organizer photo */
+    height: 100px; /* Set a fixed height for the organizer photo */
+    border-radius: 50%; /* Make the photo rounded */
+  }
+  
+  .organizer-info {
+    display: flex; /* Make organizer info a flex container */
+    flex-direction: column; /* Stack organizer name and type vertically */
+    flex: 1;
+  }
+  
+  .organizer-name {
+    display: flex; /* Make organizer name a flex container */
+    align-items: center; /* Align name and leaf icon vertically */
+    flex-direction: row;
+    font-family: 'Whisper', sans-serif;
+    margin-top: 100px;
+  }
+  
+  .thriving-icon {
+    margin-left: 10px; /* Add space between name and leaf icon */
+  }
+  
+  .organizer-type {
+     /* Add space between name and type */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+  }
+  
+  .status {
+    display: flex;
+    border: 2px solid white; /* White border around the status section */
+    padding: 5px 10px; /* Add padding inside the status section */
+    position: relative; 
+    flex-direction: column;
+    margin-inline: auto;
+  }
+  
+  .verified, .thriving{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .verified::before, .thriving::before {
+    content: '';
+    margin-right: 10px; 
+  }
+
+  .verified {
+    color: green;
+  }
+  
+  .thriving {
+    color: blue;
+  }
+  .content-container {
+    display: flex; 
+    align-items: stretch; 
+    flex-direction: column;
+    margin-top: 20px; 
+    flex: 3;
+    gap: 10px;
+  }
+  .event-title-container {
+    margin-top: 20px;
+  }
+
+  .event-title {
+    text-align: left;
+    margin-bottom: 10px;
+    color:#e70d0d;
+    font-family: 'mooli', sans-serif;
+  }
+  
+  .description-title{
+    font-family: 'mooli', sans-serif;
+    font-weight: 50px;
+  }
+  .event-details-container {
+    width: 60%;
+    height: 300px; 
+    border: 2px solid white;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+
+  .event-details-container::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  .event-details p {
+    margin: 10px 0;
+  }
+  .event-actions {
+    display: flex;
+    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%; /* Distribute buttons evenly */
+  }
+  .decline-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 0px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+  
+  .event-actions button {
+    background-color: transparent; /* Remove button background color */
+    color: white; /* Set button text color to white */
+    border: 1px solid white; /* White border around buttons */
+    padding: 10px 20px; /* Add padding to buttons */
+    cursor: pointer; /* Indicate clickable buttons */
+  }
+  
+  .decline-button:hover {
+    background-color: #e70d0d;
+    color: white;
+  }

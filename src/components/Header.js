@@ -3,6 +3,7 @@ import './Header.css';
 import LogoSVG from '../assets/photos/svg/header_logo.svg'; // Ensure this path is correct
 import StickyLogoSVG from '../assets/photos/svg/header_logo1.svg'; // Sticky logo
 
+
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
 
@@ -38,7 +39,7 @@ const Header = () => {
         {/* Navigation moved to the right-hand side */}
         <nav className="navigation">
           <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#artists">Artists</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
