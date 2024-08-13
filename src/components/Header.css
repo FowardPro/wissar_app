@@ -34,7 +34,7 @@
 }
 
 .logo-svg {
-  height: 200px;  
+  height: 100px;  
   transition: height 0.3s ease; /* Smooth transition for logo size */
 }
 
